@@ -1,29 +1,22 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  Amalgamate
 //
 //  Created by Chris Darc on 2016-02-28.
 //  Copyright (c) 2016 Group10. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "FourthViewController.h"
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-
-@interface FirstViewController ()
+@interface FourthViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation FourthViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
 }
 
 - (void)didReceiveMemoryWarning {

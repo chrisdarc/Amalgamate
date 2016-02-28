@@ -18,6 +18,8 @@
 		8369FCDF1C839A0A00036809 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8369FCDC1C839A0A00036809 /* FBSDKCoreKit.framework */; };
 		8369FCE01C839A0A00036809 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8369FCDD1C839A0A00036809 /* FBSDKLoginKit.framework */; };
 		8369FCE11C839A0A00036809 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8369FCDE1C839A0A00036809 /* FBSDKShareKit.framework */; };
+		8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE31C83A0FA00036809 /* FourthViewController.m */; };
+		8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE51C83A0FA00036809 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		8369FCDC1C839A0A00036809 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8369FCDD1C839A0A00036809 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8369FCDE1C839A0A00036809 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		8369FCE21C83A0FA00036809 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		8369FCE31C83A0FA00036809 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		8369FCE41C83A0FA00036809 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		8369FCE51C83A0FA00036809 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,10 @@
 				8369FCB21C838F8A00036809 /* AppDelegate.m */,
 				8369FCB41C838F8A00036809 /* FirstViewController.h */,
 				8369FCB51C838F8A00036809 /* FirstViewController.m */,
+				8369FCE21C83A0FA00036809 /* FourthViewController.h */,
+				8369FCE31C83A0FA00036809 /* FourthViewController.m */,
+				8369FCE41C83A0FA00036809 /* ThirdViewController.h */,
+				8369FCE51C83A0FA00036809 /* ThirdViewController.m */,
 				8369FCB71C838F8A00036809 /* SecondViewController.h */,
 				8369FCB81C838F8A00036809 /* SecondViewController.m */,
 				8369FCBA1C838F8A00036809 /* Main.storyboard */,
@@ -237,6 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8369FCB91C838F8A00036809 /* SecondViewController.m in Sources */,
+				8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */,
+				8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */,
 				8369FCB31C838F8A00036809 /* AppDelegate.m in Sources */,
 				8369FCB61C838F8A00036809 /* FirstViewController.m in Sources */,
 				8369FCB01C838F8A00036809 /* main.m in Sources */,

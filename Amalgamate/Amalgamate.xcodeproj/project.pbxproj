@@ -20,6 +20,8 @@
 		8369FCE11C839A0A00036809 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8369FCDE1C839A0A00036809 /* FBSDKShareKit.framework */; };
 		8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE31C83A0FA00036809 /* FourthViewController.m */; };
 		8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE51C83A0FA00036809 /* ThirdViewController.m */; };
+		83CC43691C83A8B30055A0AD /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC43671C83A8B30055A0AD /* Login.m */; };
+		83CC436A1C83A8B30055A0AD /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC43681C83A8B30055A0AD /* Login.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		8369FCE31C83A0FA00036809 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		8369FCE41C83A0FA00036809 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8369FCE51C83A0FA00036809 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		83CC43661C83A8B30055A0AD /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		83CC43671C83A8B30055A0AD /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		83CC43681C83A8B30055A0AD /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,9 @@
 				8369FCB71C838F8A00036809 /* SecondViewController.h */,
 				8369FCB81C838F8A00036809 /* SecondViewController.m */,
 				8369FCBA1C838F8A00036809 /* Main.storyboard */,
+				83CC43661C83A8B30055A0AD /* Login.h */,
+				83CC43671C83A8B30055A0AD /* Login.m */,
+				83CC43681C83A8B30055A0AD /* Login.xib */,
 				8369FCBD1C838F8A00036809 /* Images.xcassets */,
 				8369FCBF1C838F8A00036809 /* LaunchScreen.xib */,
 				8369FCDC1C839A0A00036809 /* FBSDKCoreKit.framework */,
@@ -229,6 +237,7 @@
 				8369FCBC1C838F8A00036809 /* Main.storyboard in Resources */,
 				8369FCC11C838F8A00036809 /* LaunchScreen.xib in Resources */,
 				8369FCBE1C838F8A00036809 /* Images.xcassets in Resources */,
+				83CC436A1C83A8B30055A0AD /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +258,7 @@
 				8369FCB91C838F8A00036809 /* SecondViewController.m in Sources */,
 				8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */,
 				8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */,
+				83CC43691C83A8B30055A0AD /* Login.m in Sources */,
 				8369FCB31C838F8A00036809 /* AppDelegate.m in Sources */,
 				8369FCB61C838F8A00036809 /* FirstViewController.m in Sources */,
 				8369FCB01C838F8A00036809 /* main.m in Sources */,
@@ -456,6 +466,7 @@
 				8369FCD21C838F8A00036809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8369FCD31C838F8A00036809 /* Build configuration list for PBXNativeTarget "AmalgamateTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +475,7 @@
 				8369FCD51C838F8A00036809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

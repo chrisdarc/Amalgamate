@@ -8,10 +8,8 @@
 
 #import "Login.h"
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-
 @interface Login ()
+<FBSDKLoginButtonDelegate>
 
 @end
 
@@ -22,9 +20,26 @@
     // Do any additional setup after loading the view from its nib.
     
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    [loginButton setDelegate:self];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
+    
 }
+
+- (void)  loginButton:  (FBSDKLoginButton *)loginButton
+didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
+                error:  (NSError *)error{
+    
+    NSLog(@"facebook login button test");
+    
+    
+    
+}
+
+- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    NSLog(@"facebook logout button test");
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginState.h"
 
 @interface FirstViewController : UIViewController
+{
+    IBOutlet UIButton* logInButton;
+    IBOutlet UILabel* feedLabel;
+    IBOutlet UILabel* subtitle;
+}
 
+-(IBAction)presentLoginScreen:(id)sender;
 
 @end
 

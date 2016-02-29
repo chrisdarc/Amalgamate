@@ -21,6 +21,10 @@
 		8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE31C83A0FA00036809 /* FourthViewController.m */; };
 		8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE51C83A0FA00036809 /* ThirdViewController.m */; };
 		837ACDF41C83D12C002CDBD2 /* LoginState.m in Sources */ = {isa = PBXBuildFile; fileRef = 837ACDF31C83D12C002CDBD2 /* LoginState.m */; };
+		837ACDFA1C83DFF7002CDBD2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ACDF61C83DFF7002CDBD2 /* Fabric.framework */; };
+		837ACDFB1C83DFF7002CDBD2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ACDF71C83DFF7002CDBD2 /* TwitterKit.framework */; };
+		837ACDFC1C83DFF7002CDBD2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 837ACDF81C83DFF7002CDBD2 /* TwitterKitResources.bundle */; };
+		837ACDFD1C83DFF7002CDBD2 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ACDF91C83DFF7002CDBD2 /* TwitterCore.framework */; };
 		83CC43691C83A8B30055A0AD /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC43671C83A8B30055A0AD /* Login.m */; };
 		83CC436A1C83A8B30055A0AD /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC43681C83A8B30055A0AD /* Login.xib */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,10 @@
 		8369FCE51C83A0FA00036809 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		837ACDF21C83D12C002CDBD2 /* LoginState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginState.h; sourceTree = "<group>"; };
 		837ACDF31C83D12C002CDBD2 /* LoginState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginState.m; sourceTree = "<group>"; };
+		837ACDF61C83DFF7002CDBD2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		837ACDF71C83DFF7002CDBD2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
+		837ACDF81C83DFF7002CDBD2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
+		837ACDF91C83DFF7002CDBD2 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
 		83CC43661C83A8B30055A0AD /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		83CC43671C83A8B30055A0AD /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		83CC43681C83A8B30055A0AD /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
@@ -71,8 +79,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8369FCE01C839A0A00036809 /* FBSDKLoginKit.framework in Frameworks */,
+				837ACDFD1C83DFF7002CDBD2 /* TwitterCore.framework in Frameworks */,
+				837ACDFB1C83DFF7002CDBD2 /* TwitterKit.framework in Frameworks */,
 				8369FCDF1C839A0A00036809 /* FBSDKCoreKit.framework in Frameworks */,
 				8369FCE11C839A0A00036809 /* FBSDKShareKit.framework in Frameworks */,
+				837ACDFA1C83DFF7002CDBD2 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +139,10 @@
 				8369FCDC1C839A0A00036809 /* FBSDKCoreKit.framework */,
 				8369FCDD1C839A0A00036809 /* FBSDKLoginKit.framework */,
 				8369FCDE1C839A0A00036809 /* FBSDKShareKit.framework */,
+				837ACDF61C83DFF7002CDBD2 /* Fabric.framework */,
+				837ACDF71C83DFF7002CDBD2 /* TwitterKit.framework */,
+				837ACDF81C83DFF7002CDBD2 /* TwitterKitResources.bundle */,
+				837ACDF91C83DFF7002CDBD2 /* TwitterCore.framework */,
 				8369FCAD1C838F8A00036809 /* Supporting Files */,
 			);
 			path = Amalgamate;
@@ -169,6 +184,7 @@
 				8369FCA61C838F8A00036809 /* Sources */,
 				8369FCA71C838F8A00036809 /* Frameworks */,
 				8369FCA81C838F8A00036809 /* Resources */,
+				837ACDF51C83DFBD002CDBD2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -243,6 +259,7 @@
 				8369FCC11C838F8A00036809 /* LaunchScreen.xib in Resources */,
 				8369FCBE1C838F8A00036809 /* Images.xcassets in Resources */,
 				83CC436A1C83A8B30055A0AD /* Login.xib in Resources */,
+				837ACDFC1C83DFF7002CDBD2 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +271,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		837ACDF51C83DFBD002CDBD2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run b6b852f3adf5b07f55f58207d6257eaaa859b499 1b4e3268871ee203aa56b7cc293174a4b57559b850f8f5977b74bd16b8e474b6";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8369FCA61C838F8A00036809 /* Sources */ = {
@@ -395,9 +428,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Amalgamate",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Amalgamate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -409,9 +444,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Amalgamate",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Amalgamate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

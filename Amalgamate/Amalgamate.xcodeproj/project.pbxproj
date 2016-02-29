@@ -20,6 +20,7 @@
 		8369FCE11C839A0A00036809 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8369FCDE1C839A0A00036809 /* FBSDKShareKit.framework */; };
 		8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE31C83A0FA00036809 /* FourthViewController.m */; };
 		8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE51C83A0FA00036809 /* ThirdViewController.m */; };
+		837ACDF41C83D12C002CDBD2 /* LoginState.m in Sources */ = {isa = PBXBuildFile; fileRef = 837ACDF31C83D12C002CDBD2 /* LoginState.m */; };
 		83CC43691C83A8B30055A0AD /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC43671C83A8B30055A0AD /* Login.m */; };
 		83CC436A1C83A8B30055A0AD /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC43681C83A8B30055A0AD /* Login.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		8369FCE31C83A0FA00036809 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		8369FCE41C83A0FA00036809 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8369FCE51C83A0FA00036809 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		837ACDF21C83D12C002CDBD2 /* LoginState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginState.h; sourceTree = "<group>"; };
+		837ACDF31C83D12C002CDBD2 /* LoginState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginState.m; sourceTree = "<group>"; };
 		83CC43661C83A8B30055A0AD /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		83CC43671C83A8B30055A0AD /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		83CC43681C83A8B30055A0AD /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				8369FCBA1C838F8A00036809 /* Main.storyboard */,
 				83CC43661C83A8B30055A0AD /* Login.h */,
 				83CC43671C83A8B30055A0AD /* Login.m */,
+				837ACDF21C83D12C002CDBD2 /* LoginState.h */,
+				837ACDF31C83D12C002CDBD2 /* LoginState.m */,
 				83CC43681C83A8B30055A0AD /* Login.xib */,
 				8369FCBD1C838F8A00036809 /* Images.xcassets */,
 				8369FCBF1C838F8A00036809 /* LaunchScreen.xib */,
@@ -256,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8369FCB91C838F8A00036809 /* SecondViewController.m in Sources */,
+				837ACDF41C83D12C002CDBD2 /* LoginState.m in Sources */,
 				8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */,
 				8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */,
 				83CC43691C83A8B30055A0AD /* Login.m in Sources */,

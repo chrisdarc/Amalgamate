@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [loginState setInitialLoggedIn];
+    //[loginState setInitialLoggedIn];
     
     //If user is not logged in, go to feed, otherwise present them with a log in button.
     if (![loginState getLoggedInState])
@@ -30,6 +30,8 @@
         amalgamateLabel.alpha = 1;
         subtitle.alpha = 1;
         logInButton.alpha = 1;
+        feed.alpha = 0;
+        feed.userInteractionEnabled = NO;
         
     }
     else
@@ -46,10 +48,48 @@
     logInButton.alpha = 0;
     
     amalgamateLabel.text = @"Feed";
+    amalgamateLabel.alpha = 0;
     subtitle.text = @"Feed will be here.";
+    subtitle.alpha = 0;
     
-    amalgamateLabel.alpha = 1;
-    subtitle.alpha = 1;
+    feed.userInteractionEnabled = YES;
+    feed.alpha = 1;
+    
+//    amalgamateLabel.alpha = 1;
+//    subtitle.alpha = 1;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    //number of sections to display social media
+    return (1);
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //number of posts currently available to display?
+    return (25);
+}
+
+-(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cellToReturn = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if(cellToReturn == nil)
+    {
+        cellToReturn = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"Cell"];
+    }
+    
+    //Call a get content function and put content here.
+    cellToReturn.textLabel.text = [NSString stringWithFormat:@"%ld %s", (long)indexPath.row, "Social Media Content"];
+    
+    return (cellToReturn);
+}
+
+//function to get content from facebook?
+-(void) getContent
+{
+    return;
 }
 
 -(IBAction)presentLoginScreen:(id)sender
@@ -69,13 +109,24 @@
 -(void)recordUserLoggedIn:(UIViewController*)vc
 {
     NSLog(@"123");
+    NSLog(@"%d\n", [loginState getLoggedInState]);
+    //Is this not getting called?
     [loginState setLoggedInTrue];
+    NSLog(@"%d\n", [loginState getLoggedInState]);
+
+    NSLog(@"123");
+
 }
 
 -(void)recordUserLoggedOut:(UIViewController*)vc
 {
     NSLog(@"456");
+    NSLog(@"%d\n", [loginState getLoggedInState]);
+    //Is this not getting called?
     [loginState setLoggedInFalse];
+    NSLog(@"%d\n", [loginState getLoggedInState]);
+    NSLog(@"456");
+
 }
 
 - (void)didReceiveMemoryWarning {

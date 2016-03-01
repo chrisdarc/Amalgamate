@@ -15,11 +15,19 @@
     IBOutlet UIButton* logInButton;
     IBOutlet UILabel* amalgamateLabel;
     IBOutlet UILabel* subtitle;
+    IBOutlet UITableView* feed;
 }
 
--(IBAction)presentLoginScreen:(id)sender;
 
 -(void)showFeed;
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+
+-(void) getContent;
+
+-(IBAction)presentLoginScreen:(id)sender;
 
 -(void)didDismissViewController:(UIViewController*)vc;
 

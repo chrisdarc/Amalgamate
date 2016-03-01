@@ -26,6 +26,7 @@
 		837ACDFD1C83DFF7002CDBD2 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ACDF91C83DFF7002CDBD2 /* TwitterCore.framework */; };
 		83CC43691C83A8B30055A0AD /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC43671C83A8B30055A0AD /* Login.m */; };
 		83CC436A1C83A8B30055A0AD /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC43681C83A8B30055A0AD /* Login.xib */; };
+		FFAEDFA61C865E0B00DFD28F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAEDFA51C865E0B00DFD28F /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		83CC43661C83A8B30055A0AD /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		83CC43671C83A8B30055A0AD /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		83CC43681C83A8B30055A0AD /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		FFAEDFA51C865E0B00DFD28F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAEDFA61C865E0B00DFD28F /* Social.framework in Frameworks */,
 				8369FCE01C839A0A00036809 /* FBSDKLoginKit.framework in Frameworks */,
 				837ACDFD1C83DFF7002CDBD2 /* TwitterCore.framework in Frameworks */,
 				837ACDFB1C83DFF7002CDBD2 /* TwitterKit.framework in Frameworks */,
@@ -97,6 +100,7 @@
 		8369FCA11C838F8A00036809 = {
 			isa = PBXGroup;
 			children = (
+				FFAEDFA51C865E0B00DFD28F /* Social.framework */,
 				8369FCAC1C838F8A00036809 /* Amalgamate */,
 				8369FCC91C838F8A00036809 /* AmalgamateTests */,
 				8369FCAB1C838F8A00036809 /* Products */,

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TwitterKit/TwitterKit.h>
+#import <Social/Social.h>
 
 @interface SecondViewController : UIViewController
-
+- (IBAction)tweetTapped:(id)sender;
 
 @end
 

@@ -10,20 +10,22 @@
 #import "LoginState.h"
 #import "Login.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <LoginViewControllerDelegate>
 {
     IBOutlet UIButton* logInButton;
     IBOutlet UILabel* amalgamateLabel;
     IBOutlet UILabel* subtitle;
 }
 
--(void)didDismissViewController;
-
-//@property Login* login;
-
 -(IBAction)presentLoginScreen:(id)sender;
 
 -(void)showFeed;
+
+-(void)didDismissViewController:(UIViewController*)vc;
+
+-(void)recordUserLoggedIn:(UIViewController*)vc;
+
+-(void)recordUserLoggedOut:(UIViewController*)vc;
 
 @end
 

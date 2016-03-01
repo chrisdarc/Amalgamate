@@ -22,12 +22,14 @@
 
 -(void)setLoggedInTrue
 {
-    self.loggedIn = TRUE;
+    NSLog(@"Recorded in log: Logged In");
+    self.loggedIn = YES;
 }
 
 -(void)setLoggedInFalse
 {
-    self.loggedIn = TRUE;
+    NSLog(@"Recorded in log: Logged Out");
+    self.loggedIn = NO;
 }
 
 @end

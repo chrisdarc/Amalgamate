@@ -7,7 +7,6 @@
 //
 
 #import "FirstViewController.h"
-#import "Login.h"
 
 @interface FirstViewController ()
 
@@ -15,19 +14,19 @@
 
 @implementation FirstViewController
 {
-    Login *login;
+    LoginState* loginState;// = [[LoginState alloc] init];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //first go, if user is logged in or not.
-    NSLog(@"%d\n", login.loginState.getLoggedInState);
-    if (![login.loginState getLoggedInState])
+    [loginState setInitialLoggedIn];
+    
+    //If user is not logged in, go to feed, otherwise present them with a log in button.
+    if (![loginState getLoggedInState])
     {
-        //if the user is not logged in, present them with the login button.
-        NSLog(@"Got Here");
+        //button presentation
         amalgamateLabel.alpha = 1;
         subtitle.alpha = 1;
         logInButton.alpha = 1;
@@ -35,13 +34,13 @@
     }
     else
     {
+        //show the feed
         [self showFeed];
     }
 }
 
 -(void)showFeed
 {
-    NSLog(@"also got here...");
     //if the user is logged in, show them their feed
     logInButton.enabled = NO;
     logInButton.alpha = 0;
@@ -55,29 +54,28 @@
 
 -(IBAction)presentLoginScreen:(id)sender
 {
-//    Login * loginScreen = [[Login alloc] init];
-//    [self presentViewController: loginScreen animated:YES completion:nil];
-//    Login* loginScreen = [[Login alloc] initWithNibName:@"Login" bundle: nil];
-//    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: loginScreen];
-//    __weak typeof(self) weakSelf = self;
-//    login.didDismiss = ^(NSString *data)
-//    {
-//        NSLog(@"Dismissed SecondViewController");
-//        [weakSelf showFeed];
-//    };
-//    [self presentViewController:loginScreen animated:YES completion:nil];
-    
-    //login = [Login new];
-    
     Login* loginScreen = [[Login alloc] initWithNibName:@"Login" bundle: nil];
     UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: loginScreen];
+    loginScreen.delegate = self;
     [self presentViewController: enclosingNav animated: YES completion:nil];
 }
 
--(void)didDismissViewController
+-(void)didDismissViewController:(UIViewController*)vc
 {
     NSLog(@"Dismissed !!!!!");
     [self showFeed];
+}
+
+-(void)recordUserLoggedIn:(UIViewController*)vc
+{
+    NSLog(@"123");
+    [loginState setLoggedInTrue];
+}
+
+-(void)recordUserLoggedOut:(UIViewController*)vc
+{
+    NSLog(@"456");
+    [loginState setLoggedInFalse];
 }
 
 - (void)didReceiveMemoryWarning {

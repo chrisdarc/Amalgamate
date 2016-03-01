@@ -11,18 +11,17 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-#import "FirstViewController.h"
-
+@protocol LoginViewControllerDelegate <NSObject>
+-(void)didDismissViewController:(UIViewController*)vc;
+-(void)recordUserLoggedIn:(UIViewController*)vc;
+-(void)recordUserLoggedOut:(UIViewController*)vc;
+@end
 
 @interface Login : UIViewController
 
-//@property (nonatomic, copy) void (^didDismiss)(NSString *data);
-
-@property LoginState *loginState;
+@property(nonatomic, weak) id<LoginViewControllerDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
-
-//-(void)didDismissViewController:(UIViewController*)vc;
 
 - (void)  loginButton:  (FBSDKLoginButton *)loginButton
 didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result

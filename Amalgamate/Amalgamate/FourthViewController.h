@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Login.h"
 
-@interface FourthViewController : UIViewController
+@interface FourthViewController : UIViewController <LoginViewControllerDelegate>
+{
+    IBOutlet UIButton* manageAccountsButton;
+}
+-(IBAction)displayLogin:(id)sender;
 
+-(void)didDismissViewController:(UIViewController*)vc;
 
 @end
 

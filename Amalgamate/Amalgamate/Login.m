@@ -19,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.loginState = [LoginState new];
+    [self.loginState setInitialLoggedIn];
+    
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     [loginButton setDelegate:self];
     loginButton.center = self.view.center;
@@ -28,18 +31,33 @@
 
 - (void)  loginButton:  (FBSDKLoginButton *)loginButton
 didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
-                error:  (NSError *)error{
+                error:  (NSError *)error
+{
     
     NSLog(@"facebook login button test");
     
+    [self.loginState setLoggedInTrue];
+    
     
     
 }
 
-- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
+{
     NSLog(@"facebook logout button test");
+    [self.loginState setLoggedInFalse];
 }
 
+
+-(IBAction)dismissLoginScreen:(id)sender
+{
+    [ self dismissViewControllerAnimated: YES completion: nil ];
+//    if (self.didDismiss)
+//    {
+//        NSLog(@"Dismissed in the Login.m");
+//        self.didDismiss(@"some extra data");
+//    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

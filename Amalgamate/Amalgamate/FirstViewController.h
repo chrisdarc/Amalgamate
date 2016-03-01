@@ -8,15 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginState.h"
+#import "Login.h"
 
 @interface FirstViewController : UIViewController
 {
     IBOutlet UIButton* logInButton;
-    IBOutlet UILabel* feedLabel;
+    IBOutlet UILabel* amalgamateLabel;
     IBOutlet UILabel* subtitle;
 }
 
+-(void)didDismissViewController;
+
+//@property Login* login;
+
 -(IBAction)presentLoginScreen:(id)sender;
+
+-(void)showFeed;
 
 @end
 

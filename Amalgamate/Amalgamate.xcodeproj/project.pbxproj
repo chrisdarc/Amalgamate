@@ -20,7 +20,6 @@
 		8369FCE11C839A0A00036809 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8369FCDE1C839A0A00036809 /* FBSDKShareKit.framework */; };
 		8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE31C83A0FA00036809 /* FourthViewController.m */; };
 		8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369FCE51C83A0FA00036809 /* ThirdViewController.m */; };
-		837ACDF41C83D12C002CDBD2 /* LoginState.m in Sources */ = {isa = PBXBuildFile; fileRef = 837ACDF31C83D12C002CDBD2 /* LoginState.m */; };
 		837ACDFA1C83DFF7002CDBD2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ACDF61C83DFF7002CDBD2 /* Fabric.framework */; };
 		837ACDFB1C83DFF7002CDBD2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ACDF71C83DFF7002CDBD2 /* TwitterKit.framework */; };
 		837ACDFC1C83DFF7002CDBD2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 837ACDF81C83DFF7002CDBD2 /* TwitterKitResources.bundle */; };
@@ -62,8 +61,6 @@
 		8369FCE31C83A0FA00036809 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		8369FCE41C83A0FA00036809 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8369FCE51C83A0FA00036809 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		837ACDF21C83D12C002CDBD2 /* LoginState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginState.h; sourceTree = "<group>"; };
-		837ACDF31C83D12C002CDBD2 /* LoginState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginState.m; sourceTree = "<group>"; };
 		837ACDF61C83DFF7002CDBD2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		837ACDF71C83DFF7002CDBD2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
 		837ACDF81C83DFF7002CDBD2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
@@ -132,8 +129,6 @@
 				83CC43661C83A8B30055A0AD /* Login.h */,
 				83CC43671C83A8B30055A0AD /* Login.m */,
 				83CC43681C83A8B30055A0AD /* Login.xib */,
-				837ACDF21C83D12C002CDBD2 /* LoginState.h */,
-				837ACDF31C83D12C002CDBD2 /* LoginState.m */,
 				8369FCBD1C838F8A00036809 /* Images.xcassets */,
 				8369FCBF1C838F8A00036809 /* LaunchScreen.xib */,
 				8369FCDC1C839A0A00036809 /* FBSDKCoreKit.framework */,
@@ -294,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8369FCB91C838F8A00036809 /* SecondViewController.m in Sources */,
-				837ACDF41C83D12C002CDBD2 /* LoginState.m in Sources */,
 				8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */,
 				8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */,
 				83CC43691C83A8B30055A0AD /* Login.m in Sources */,

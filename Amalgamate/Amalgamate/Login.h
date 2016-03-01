@@ -13,8 +13,6 @@
 
 @protocol LoginViewControllerDelegate <NSObject>
 -(void)didDismissViewController:(UIViewController*)vc;
--(void)recordUserLoggedIn:(UIViewController*)vc;
--(void)recordUserLoggedOut:(UIViewController*)vc;
 @end
 
 @interface Login : UIViewController

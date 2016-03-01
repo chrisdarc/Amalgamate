@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginState.h"
 #import "Login.h"
 
 @interface FirstViewController : UIViewController <LoginViewControllerDelegate>
@@ -30,10 +29,6 @@
 -(IBAction)presentLoginScreen:(id)sender;
 
 -(void)didDismissViewController:(UIViewController*)vc;
-
--(void)recordUserLoggedIn:(UIViewController*)vc;
-
--(void)recordUserLoggedOut:(UIViewController*)vc;
 
 @end
 

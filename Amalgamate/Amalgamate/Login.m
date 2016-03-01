@@ -30,16 +30,12 @@
 didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
                 error:  (NSError *)error
 {
-    
     NSLog(@"facebook login button successful");
-    [self.delegate recordUserLoggedIn:self];
-    
 }
 
 - (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
 {
     NSLog(@"facebook logout button successful");
-    [self.delegate recordUserLoggedOut:self];
 }
 
 

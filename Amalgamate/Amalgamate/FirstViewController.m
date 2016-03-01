@@ -14,7 +14,6 @@
 
 @implementation FirstViewController
 {
-    LoginState* loginState;// = [[LoginState alloc] init];
 }
 
 - (void)viewDidLoad {
@@ -24,20 +23,21 @@
     //[loginState setInitialLoggedIn];
     
     //If user is not logged in, go to feed, otherwise present them with a log in button.
-    if (![loginState getLoggedInState])
+    if ([FBSDKAccessToken currentAccessToken])//(![loginState getLoggedInState])
     {
+        
+        //show the feed
+        [self showFeed];
+    }
+    else
+    {
+        
         //button presentation
         amalgamateLabel.alpha = 1;
         subtitle.alpha = 1;
         logInButton.alpha = 1;
         feed.alpha = 0;
         feed.userInteractionEnabled = NO;
-        
-    }
-    else
-    {
-        //show the feed
-        [self showFeed];
     }
 }
 
@@ -106,28 +106,6 @@
     [self showFeed];
 }
 
--(void)recordUserLoggedIn:(UIViewController*)vc
-{
-    NSLog(@"123");
-    NSLog(@"%d\n", [loginState getLoggedInState]);
-    //Is this not getting called?
-    [loginState setLoggedInTrue];
-    NSLog(@"%d\n", [loginState getLoggedInState]);
-
-    NSLog(@"123");
-
-}
-
--(void)recordUserLoggedOut:(UIViewController*)vc
-{
-    NSLog(@"456");
-    NSLog(@"%d\n", [loginState getLoggedInState]);
-    //Is this not getting called?
-    [loginState setLoggedInFalse];
-    NSLog(@"%d\n", [loginState getLoggedInState]);
-    NSLog(@"456");
-
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

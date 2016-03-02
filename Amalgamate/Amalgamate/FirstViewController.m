@@ -20,8 +20,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //[loginState setInitialLoggedIn];
-    
+    [self whatToShow];
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    [self whatToShow];
+}
+
+-(void)whatToShow
+{
     //If user is not logged in, go to feed, otherwise present them with a log in button.
     if ([FBSDKAccessToken currentAccessToken])//(![loginState getLoggedInState])
     {
@@ -31,29 +40,31 @@
     }
     else
     {
-        
-        //button presentation
-        amalgamateLabel.alpha = 1;
-        subtitle.alpha = 1;
-        logInButton.alpha = 1;
-        feed.alpha = 0;
-        feed.userInteractionEnabled = NO;
+        [self presentWelcome];
     }
+}
+
+
+-(void)presentWelcome
+{
+    //button presentation
+    feed.alpha = 0;
+    feed.userInteractionEnabled = NO;
+    amalgamateLabel.alpha = 1;
+    subtitle.alpha = 1;
+    logInButton.alpha = 1;
+    logInButton.enabled = YES;
 }
 
 -(void)showFeed
 {
     //if the user is logged in, show them their feed
-    logInButton.enabled = NO;
-    logInButton.alpha = 0;
-    
-    amalgamateLabel.text = @"Feed";
-    amalgamateLabel.alpha = 0;
-    subtitle.text = @"Feed will be here.";
-    subtitle.alpha = 0;
-    
     feed.userInteractionEnabled = YES;
     feed.alpha = 1;
+    amalgamateLabel.alpha = 0;
+    subtitle.alpha = 0;
+    logInButton.alpha = 0;
+    logInButton.enabled = NO;
     
 //    amalgamateLabel.alpha = 1;
 //    subtitle.alpha = 1;
@@ -103,7 +114,7 @@
 -(void)didDismissViewController:(UIViewController*)vc
 {
     NSLog(@"Dismissed !!!!!");
-    [self showFeed];
+    //[self whatToShow];
 }
 
 

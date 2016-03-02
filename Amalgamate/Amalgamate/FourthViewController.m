@@ -7,6 +7,7 @@
 //
 
 #import "FourthViewController.h"
+#import "FirstViewController.h"
 
 @interface FourthViewController ()
 
@@ -15,7 +16,7 @@
 @implementation FourthViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,7 +30,8 @@
 
 -(void)didDismissViewController:(UIViewController*)vc
 {
-    NSLog(@"Dismissed !!!!!");
+    NSLog(@"Dismissed in fourth");
+    //[self.delegate whatToShowFromOtherClass:self];
 }
 
 - (void)didReceiveMemoryWarning {

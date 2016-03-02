@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Login.h"
+//#import "FourthViewController.h"
+
+
 
 @interface FirstViewController : UIViewController <LoginViewControllerDelegate>
 {
@@ -18,7 +21,13 @@
 }
 
 
+-(void) viewDidAppear:(BOOL)animated;
+
 -(void)showFeed;
+
+-(void)whatToShow;
+
+-(void)presentWelcome;
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 

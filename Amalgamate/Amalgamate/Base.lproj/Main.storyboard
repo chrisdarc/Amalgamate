@@ -167,6 +167,16 @@
                                     <action selector="tweetTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="sc3-Lb-GGQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OrD-XS-jYO">
+                                <rect key="frame" x="111" y="222" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="check if have logout/in">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsForsocial:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="mNu-OH-Gr5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

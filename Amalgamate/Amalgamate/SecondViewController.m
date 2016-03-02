@@ -59,6 +59,12 @@
      */
 }
 
+-(IBAction)settingsForsocial:(id)sender{
+[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=TWITTER"]];
+
+}
+
+
 
 
 - (IBAction) openWebpageFB:(id)sender{

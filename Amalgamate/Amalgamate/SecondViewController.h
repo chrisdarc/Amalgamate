@@ -12,6 +12,9 @@
 
 @interface SecondViewController : UIViewController
 
+
+@property NSString* usernameforTW;
+
 - (IBAction)tweetTapped:(id)sender;
 - (IBAction)openWebpage:(id)sender;
 

@@ -34,7 +34,27 @@
 }
 
 - (IBAction) openWebpage:(id)sender{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/huajisas/status/704812479658881024?lang=en"]];
+    
+    
+    NSString* twurl= [NSString stringWithFormat:@"%@%@",@"https://twitter.com/",_usernameforTW];
+   // NSLog(_usernameforTW);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twurl]];
+    /*
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"]];
+    //[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error){
+        NSString: *userID = [Twitter sharedInstance].sessionStore.session.userID;
+        //NSString: *userName =[Twitter sharedInstance].sessionStore.session.userName;
+        NSLog(userID);
+        NSLog([session userName]);
+
+    //}]
+    
+      //TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userID];
+    
+   //[client loadTweetWithID:@"20" completion:^(TWTRTweet *tweet, NSError *error) {
+        // handle the response or error
+   //}];
+     */
 }
 
 - (void)viewDidLoad {
@@ -42,8 +62,10 @@
     TWTRLogInButton* logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession* session, NSError* error) {
         if (session) {
             NSLog(@"signed in as %@", [session userName]);
+            _usernameforTW=[session userName];
         } else {
             NSLog(@"error: %@", [error localizedDescription]);
+            _usernameforTW=[session userName];
         }
     }];
     logInButton.center = self.view.center;

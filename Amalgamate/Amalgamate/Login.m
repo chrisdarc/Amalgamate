@@ -8,6 +8,8 @@
 
 #import "Login.h"
 
+static NSString* tem;
+
 @interface Login ()
 <FBSDKLoginButtonDelegate>
 
@@ -23,7 +25,33 @@
     [loginButton setDelegate:self];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
+   // NSLog([NSString stringWithFormat:@"%f%f",self.view.center.x,self.view.center.y]);
     
+    
+    //login button for twitter
+    TWTRLogInButton* logInButtonTW = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession* session, NSError* error) {
+        if (session) {
+            NSLog(@"signed in as %@", [session userName]);
+            tem=[session userName];
+        } else {
+            NSLog(@"error: %@", [error localizedDescription]);
+            tem=[session userName];
+        }
+    }];
+    CGPoint loc=CGPointMake(187.500000, 233.500000);
+
+    logInButtonTW.center = loc;
+    
+    [self.view addSubview:logInButtonTW];
+    
+    
+    
+}
+
+
+-(NSString*)getusername{
+    self.usernameforTW=tem;
+    return [self usernameforTW];
 }
 
 - (void)  loginButton:  (FBSDKLoginButton *)loginButton

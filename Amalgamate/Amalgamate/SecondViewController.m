@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "Login.h"
 
 @interface SecondViewController ()
 
@@ -34,7 +35,8 @@
 }
 
 - (IBAction) openWebpage:(id)sender{
-    
+        Login* obj = [[Login alloc] init];
+        NSString* _usernameforTW= obj.getusername;
     
     NSString* twurl= [NSString stringWithFormat:@"%@%@",@"https://twitter.com/",_usernameforTW];
    // NSLog(_usernameforTW);
@@ -57,19 +59,49 @@
      */
 }
 
+
+
+- (IBAction) openWebpageFB:(id)sender{
+    
+    
+    NSString* fburl= [NSString stringWithFormat:@"%@",@"https://www.facebook.com"];
+    // NSLog(_usernameforTW);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fburl]];
+    /*
+     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"]];
+     //[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error){
+     NSString: *userID = [Twitter sharedInstance].sessionStore.session.userID;
+     //NSString: *userName =[Twitter sharedInstance].sessionStore.session.userName;
+     NSLog(userID);
+     NSLog([session userName]);
+     
+     //}]
+     
+     //TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userID];
+     
+     //[client loadTweetWithID:@"20" completion:^(TWTRTweet *tweet, NSError *error) {
+     // handle the response or error
+     //}];
+     */
+}
+
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TWTRLogInButton* logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession* session, NSError* error) {
-        if (session) {
-            NSLog(@"signed in as %@", [session userName]);
-            _usernameforTW=[session userName];
-        } else {
-            NSLog(@"error: %@", [error localizedDescription]);
-            _usernameforTW=[session userName];
-        }
-    }];
-    logInButton.center = self.view.center;
-    [self.view addSubview:logInButton];
+//    TWTRLogInButton* logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession* session, NSError* error) {
+//        if (session) {
+//            NSLog(@"signed in as %@", [session userName]);
+//            _usernameforTW=[session userName];
+//        } else {
+//            NSLog(@"error: %@", [error localizedDescription]);
+//            _usernameforTW=[session userName];
+//        }
+//    }];
+//    logInButton.center = self.view.center;
+//    [self.view addSubview:logInButton];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

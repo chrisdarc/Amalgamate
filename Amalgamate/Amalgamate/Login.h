@@ -10,9 +10,11 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <TwitterKit/TwitterKit.h>
 
 @protocol LoginViewControllerDelegate <NSObject>
 -(void)didDismissViewController:(UIViewController*)vc;
+
 @end
 
 @interface Login : UIViewController
@@ -28,5 +30,8 @@ didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
 - (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton;
 
 -(IBAction)dismissLoginScreen:(id)sender;
+-(NSString*)getusername;
+@property NSString* usernameforTW;
+
 
 @end

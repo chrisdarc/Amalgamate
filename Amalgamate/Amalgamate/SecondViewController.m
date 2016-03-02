@@ -33,6 +33,9 @@
     }
 }
 
+- (IBAction) openWebpage:(id)sender{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/huajisas/status/704812479658881024?lang=en"]];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

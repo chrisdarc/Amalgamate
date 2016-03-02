@@ -11,7 +11,9 @@
 #import <Social/Social.h>
 
 @interface SecondViewController : UIViewController
+
 - (IBAction)tweetTapped:(id)sender;
+- (IBAction)openWebpage:(id)sender;
 
 @end
 

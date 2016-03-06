@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7671B987-14A8-4DE2-B437-41B731127293</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Amalgamate</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D83D91D34325D727C3D5886EC10A1298118A52B4</key>
 		<string>https://github.com/chrisdarc/Amalgamate.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Amalgamate/Amalgamate.xcodeproj</string>
+	<string>Amalgamate/Amalgamate.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D83D91D34325D727C3D5886EC10A1298118A52B4</key>

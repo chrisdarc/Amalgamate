@@ -29,7 +29,7 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     [Fabric with:@[[Twitter class]]];
-
+    [Fabric with:@[TwitterKit]];
     return YES;
     // Override point for customization after application launch.
 }

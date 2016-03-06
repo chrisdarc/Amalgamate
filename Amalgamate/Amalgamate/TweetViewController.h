@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <TwitterKit/TwitterKit.h>
-@interface TweetViewController : TWTRTimelineViewController
+@interface TweetViewController : TWTRTimelineViewController{
+    IBOutlet UIButton* BGo;
+    IBOutlet UILabel* Lkeyword;
+    IBOutlet UITextField* UserInput;
+}
+
+- (IBAction)go:(id)sender;
+@property IBOutlet UITextField* SearchKeyword;
+
 
 @end

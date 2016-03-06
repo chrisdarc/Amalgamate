@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "Login.h"
 
+//static NSString* keyword;
 @interface SecondViewController ()
 
 @end
@@ -91,7 +92,25 @@
      */
 }
 
-
+//-(IBAction)search:(id)sender{
+//    keyword=_SearchKeyword.text;
+//    NSLog(@"11111");
+//    NSLog(keyword);
+//}
+//
+//
+//-(void) setKeyword{
+//    keyword=_SearchKeyword.text;
+//    NSLog(@"2222");
+//    NSLog(keyword);
+//}
+//
+//-(NSString*)getKeyWord{
+//    _MYKeyWord=keyword;
+//    NSLog(@"33333");
+//    NSLog(_MYKeyWord);
+//    return [self MYKeyWord];
+//}
 
 
 

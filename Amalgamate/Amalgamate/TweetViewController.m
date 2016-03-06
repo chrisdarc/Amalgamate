@@ -7,6 +7,7 @@
 //
 
 #import "TweetViewController.h"
+#import "SecondViewController.h"
 
 @interface TweetViewController ()
 
@@ -14,14 +15,24 @@
 
 @implementation TweetViewController
 
+
+
+- (IBAction)go:(id)sender{
+    
+    UserInput.alpha=0;
+    BGo.alpha=0;
+    Lkeyword.alpha=0;
+    TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
+    self.dataSource = [[TWTRSearchTimelineDataSource
+                        alloc] initWithSearchQuery: _SearchKeyword.text APIClient:(client)];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
-    self.dataSource = [[TWTRSearchTimelineDataSource
-                        alloc] initWithSearchQuery:@"saskatoon" APIClient:(client)];
+   
     
-
+    
 }
 
 - (void)didReceiveMemoryWarning {

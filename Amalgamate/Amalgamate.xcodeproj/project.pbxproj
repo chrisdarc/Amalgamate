@@ -27,6 +27,7 @@
 		83CC43691C83A8B30055A0AD /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC43671C83A8B30055A0AD /* Login.m */; };
 		83CC436A1C83A8B30055A0AD /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC43681C83A8B30055A0AD /* Login.xib */; };
 		FF6565F71C8BD82C0087943E /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6565F61C8BD82C0087943E /* TweetViewController.m */; };
+		FF6565FA1C8BDFDE0087943E /* TWuserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6565F91C8BDFDE0087943E /* TWuserViewController.m */; };
 		FFAEDFA61C865E0B00DFD28F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAEDFA51C865E0B00DFD28F /* Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		83CC43681C83A8B30055A0AD /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		FF6565F51C8BD82C0087943E /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
 		FF6565F61C8BD82C0087943E /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
+		FF6565F81C8BDFDE0087943E /* TWuserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWuserViewController.h; sourceTree = "<group>"; };
+		FF6565F91C8BDFDE0087943E /* TWuserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWuserViewController.m; sourceTree = "<group>"; };
 		FFAEDFA51C865E0B00DFD28F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -148,6 +151,8 @@
 				8369FCAD1C838F8A00036809 /* Supporting Files */,
 				FF6565F51C8BD82C0087943E /* TweetViewController.h */,
 				FF6565F61C8BD82C0087943E /* TweetViewController.m */,
+				FF6565F81C8BDFDE0087943E /* TWuserViewController.h */,
+				FF6565F91C8BDFDE0087943E /* TWuserViewController.m */,
 			);
 			path = Amalgamate;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				FF6565F71C8BD82C0087943E /* TweetViewController.m in Sources */,
 				8369FCB91C838F8A00036809 /* SecondViewController.m in Sources */,
 				8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */,
+				FF6565FA1C8BDFDE0087943E /* TWuserViewController.m in Sources */,
 				8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */,
 				83CC43691C83A8B30055A0AD /* Login.m in Sources */,
 				8369FCB31C838F8A00036809 /* AppDelegate.m in Sources */,

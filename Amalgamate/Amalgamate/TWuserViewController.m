@@ -1,27 +1,25 @@
 //
-//  TweetViewController.m
+//  TWuserViewController.m
 //  Amalgamate
 //
 //  Created by Ji Hua on 2016-03-05.
 //  Copyright (c) 2016 Group10. All rights reserved.
 //
 
-#import "TweetViewController.h"
+#import "TWuserViewController.h"
 
-@interface TweetViewController ()
+@interface TWuserViewController ()
 
 @end
 
-@implementation TweetViewController
+@implementation TWuserViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
-    self.dataSource = [[TWTRSearchTimelineDataSource
-                        alloc] initWithSearchQuery:@"saskatoon" APIClient:(client)];
-    
-
+    TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"huajisas" APIClient:client];
+    self.dataSource= userTimelineDataSource;
 }
 
 - (void)didReceiveMemoryWarning {

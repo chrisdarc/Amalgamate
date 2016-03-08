@@ -16,6 +16,7 @@
 }
 
 -(IBAction)displayLogin:(id)sender;
+-(IBAction)temp:(id)sender;
 
 -(void)didDismissViewController:(UIViewController*)vc;
 

@@ -15,7 +15,6 @@
 }
 
 - (IBAction)go:(id)sender;
-@property IBOutlet UITextField* SearchKeyword;
 
 
 @end

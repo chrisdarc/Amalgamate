@@ -28,10 +28,18 @@ static NSString* tem;
    // NSLog([NSString stringWithFormat:@"%f%f",self.view.center.x,self.view.center.y]);
     
     
+    
+    //twitter session
+//    TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
+//    
+//    TWTRSession *lastSession = store.session;
+//    NSArray *sessions = [store existingUserSessions];
+//    TWTRSession *specificSession = [store sessionForUserID:@"123"];
+    
     //login button for twitter
     TWTRLogInButton* logInButtonTW = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession* session, NSError* error) {
         if (session) {
-            NSLog(@"signed in as %@", [session userName]);
+            NSLog(@"signed in as %@", [session userID]);
             tem=[session userName];
         } else {
             NSLog(@"error: %@", [error localizedDescription]);

@@ -30,6 +30,10 @@
                              didFinishLaunchingWithOptions:launchOptions];
     [Fabric with:@[[Twitter class]]];
     [Fabric with:@[TwitterKit]];
+    //To initialize the Twitter Kit with your app’s credentials
+    [[Twitter sharedInstance] startWithConsumerKey:@"Vrtkpp9PzqpTk0Vg5bV5du43g" consumerSecret:@"JyfoaPUp6DwJoOYiGVx1e7B1k0huLOsFxB47IU8cAGBy1LNhA4"];
+    [Fabric with:@[[Twitter sharedInstance]]];
+    
     return YES;
     // Override point for customization after application launch.
 }

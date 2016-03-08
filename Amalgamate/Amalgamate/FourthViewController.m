@@ -8,12 +8,26 @@
 
 #import "FourthViewController.h"
 #import "FirstViewController.h"
+#import <TwitterKit/TwitterKit.h>
 
 @interface FourthViewController ()
 
 @end
 
 @implementation FourthViewController
+
+
+-(IBAction)temp:(id)sender{
+        TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
+    TWTRSession *sssion;
+        TWTRSession *lastSession = store.session;
+        NSArray *sessions = [store existingUserSessions];
+        TWTRSession *specificSession = [store sessionForUserID:@"123"];
+    
+    NSLog([lastSession userName]);
+    
+   
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];    

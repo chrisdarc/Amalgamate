@@ -17,10 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   
+}
+
+- (IBAction)ugo:(id)sender{
+    
+    uUserInput.alpha=0;
+    uBGo.alpha=0;
+    uLkeyword.alpha=0;
     TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
-    TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"huajisas" APIClient:client];
+    TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName: uUserInput.text APIClient:client];
     self.dataSource= userTimelineDataSource;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

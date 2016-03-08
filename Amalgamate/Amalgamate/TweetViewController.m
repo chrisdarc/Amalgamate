@@ -24,7 +24,7 @@
     Lkeyword.alpha=0;
     TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
     self.dataSource = [[TWTRSearchTimelineDataSource
-                        alloc] initWithSearchQuery: _SearchKeyword.text APIClient:(client)];
+                        alloc] initWithSearchQuery: UserInput.text APIClient:(client)];
 }
 
 - (void)viewDidLoad {

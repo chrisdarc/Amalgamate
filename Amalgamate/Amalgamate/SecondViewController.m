@@ -65,8 +65,14 @@
 
 }
 
-
-
+//manage the session!
+//-(IBAction)sec:(id)sender{
+//    TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
+//    NSString *userID = store.session.userID;
+//    NSLog(userID);
+//    [store logOutUserID:userID];
+//
+//}
 
 - (IBAction) openWebpageFB:(id)sender{
     

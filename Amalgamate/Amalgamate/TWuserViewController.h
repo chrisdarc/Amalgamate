@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <TwitterKit/TwitterKit.h>
-@interface TWuserViewController : TWTRTimelineViewController
+@interface TWuserViewController : TWTRTimelineViewController{
+    IBOutlet UIButton* uBGo;
+    IBOutlet UILabel* uLkeyword;
+    IBOutlet UITextField* uUserInput;
+}
+- (IBAction)ugo:(id)sender;
 
 @end

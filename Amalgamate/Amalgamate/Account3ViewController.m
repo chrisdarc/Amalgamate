@@ -7,7 +7,8 @@
 //
 
 #import "Account3ViewController.h"
-
+#import "FourthViewController.h"
+NSString* count3;
 @interface Account3ViewController ()
 
 @end
@@ -17,10 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    FourthViewController *obj = [[FourthViewController alloc] init];
+    count3=obj.getA3;
+    NSLog(count3);
     TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
-    TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName: @"yangchenass" APIClient:client];
-    self.dataSource= userTimelineDataSource;
-}
+    TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName: count3 APIClient:client];
+    self.dataSource= userTimelineDataSource;}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

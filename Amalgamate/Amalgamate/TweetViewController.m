@@ -18,7 +18,7 @@
 
 
 - (IBAction)go:(id)sender{
-    
+    Background.hidden = YES;
     UserInput.alpha=0;
     BGo.alpha=0;
     Lkeyword.alpha=0;

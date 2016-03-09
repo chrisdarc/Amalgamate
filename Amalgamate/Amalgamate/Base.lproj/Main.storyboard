@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -95,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lYN-0e-ODI">
-                                <rect key="frame" x="113" y="285" width="149" height="30"/>
+                                <rect key="frame" x="113" y="146" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,17 +107,40 @@
                                     <action selector="displayLogin:" destination="6KB-jb-uPu" eventType="touchUpInside" id="9bY-kZ-mdx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="inC-NP-75x">
-                                <rect key="frame" x="155" y="201" width="46" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="acZ-QK-BPK">
+                                <rect key="frame" x="139" y="296" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="j8p-0Z-imj">
+                                <rect key="frame" x="139" y="334" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="vHZ-Oa-Iz7">
+                                <rect key="frame" x="139" y="372" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ojv-cT-kRR">
+                                <rect key="frame" x="163" y="426" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="update">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="temp:" destination="6KB-jb-uPu" eventType="touchUpInside" id="Ha2-0p-HMW"/>
+                                    <action selector="updateAccounts:" destination="6KB-jb-uPu" eventType="touchUpInside" id="ZCp-gS-IrM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="hm3-ez-93w">
+                                <rect key="frame" x="139" y="258" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,12 +148,97 @@
                     <tabBarItem key="tabBarItem" title="More" id="orA-hg-owk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="account1" destination="hm3-ez-93w" id="e4e-c1-syg"/>
+                        <outlet property="account2" destination="acZ-QK-BPK" id="nga-69-GHv"/>
+                        <outlet property="account3" destination="j8p-0Z-imj" id="W6M-ZB-Len"/>
+                        <outlet property="account4" destination="vHZ-Oa-Iz7" id="R5s-3K-A5H"/>
                         <outlet property="manageAccountsButton" destination="lYN-0e-ODI" id="Rnv-ZN-BxJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88C-RI-4NJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="843.5" y="818.5"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="dXW-7P-Ldc">
+            <objects>
+                <viewController id="OyP-y6-D7F" customClass="Account2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KCD-pN-Blb" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="y9R-HH-3W5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8XW-QX-h5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.5" y="1540.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ls6-qz-Ox4">
+            <objects>
+                <viewController id="iML-zx-KyL" customClass="Account3ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yEg-FU-kIJ" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="IBt-Oe-rfr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbr-hV-tSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303.5" y="1540.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="XDY-Sq-EMS">
+            <objects>
+                <viewController id="1sw-tr-BUg" customClass="Account4ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="enS-RU-3S3" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="0YS-Qg-B2R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fc1-M8-JFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699.5" y="1540.5"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="3gD-fD-6Z0">
+            <objects>
+                <viewController id="bcO-6o-jcS" customClass="Account1ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7gM-LS-kuD" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="QhV-h5-Pp9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epH-eS-Xuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511.5" y="1540.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bOe-Km-pQ7">
+            <objects>
+                <tabBarController id="Hbh-rb-ZVR" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="XmD-oo-gxA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bcO-6o-jcS" kind="relationship" relationship="viewControllers" id="eV4-0D-MDG"/>
+                        <segue destination="OyP-y6-D7F" kind="relationship" relationship="viewControllers" id="v7c-zv-MQs"/>
+                        <segue destination="iML-zx-KyL" kind="relationship" relationship="viewControllers" id="sKQ-wo-TNO"/>
+                        <segue destination="1sw-tr-BUg" kind="relationship" relationship="viewControllers" id="QOO-Oz-5LN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HiL-yk-CuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="1541"/>
         </scene>
         <!--Filtered-->
         <scene sceneID="wg7-f3-ORb">
@@ -218,6 +326,16 @@
                                         <color key="textColor" red="0.80000000000000004" green="0.83921568627450982" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dg1-oL-eyZ">
+                                        <rect key="frame" x="86" y="206" width="170" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Check multiple accounts">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Hbh-rb-ZVR" kind="modal" id="cSZ-Qn-kwj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.45882352941176469" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,6 +394,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="Background" destination="IWK-8W-FDA" id="DF5-iO-zAJ"/>
                         <outlet property="uBGo" destination="NM8-6d-9Zw" id="GUz-FB-WnY"/>
                         <outlet property="uLkeyword" destination="TYT-2z-pZR" id="2bo-Gz-23W"/>
                         <outlet property="uUserInput" destination="oqR-he-98T" id="LtN-5d-LUl"/>
@@ -283,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snr-ID-hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446.5" y="1599.5"/>
+            <point key="canvasLocation" x="-696.5" y="1590.5"/>
         </scene>
         <!--Saved-->
         <scene sceneID="gEf-sy-mOO">
@@ -393,13 +512,14 @@
                     </view>
                     <connections>
                         <outlet property="BGo" destination="vki-Jk-ldQ" id="nXj-kv-WpT"/>
+                        <outlet property="Background" destination="Oob-PC-cBK" id="jJL-gn-hPT"/>
                         <outlet property="Lkeyword" destination="gYz-HJ-gYo" id="vy5-cO-z6B"/>
                         <outlet property="UserInput" destination="5ah-UP-p5w" id="g2d-y5-0Vc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOj-gD-znQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233.5" y="1618.5"/>
+            <point key="canvasLocation" x="-320.5" y="1590.5"/>
         </scene>
     </scenes>
     <resources>

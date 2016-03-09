@@ -1,35 +1,23 @@
 //
-//  TWuserViewController.m
+//  Account4ViewController.m
 //  Amalgamate
 //
-//  Created by Ji Hua on 2016-03-05.
+//  Created by Ji Hua on 2016-03-09.
 //  Copyright (c) 2016 Group10. All rights reserved.
 //
 
-#import "TWuserViewController.h"
+#import "Account4ViewController.h"
 
-@interface TWuserViewController ()
+@interface Account4ViewController ()
 
 @end
 
-@implementation TWuserViewController
+@implementation Account4ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
 }
-
-- (IBAction)ugo:(id)sender{
-    Background.hidden = YES;
-    uUserInput.alpha=0;
-    uBGo.alpha=0;
-    uLkeyword.alpha=0;
-    TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
-    TWTRUserTimelineDataSource *userTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName: uUserInput.text APIClient:client];
-    self.dataSource= userTimelineDataSource;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

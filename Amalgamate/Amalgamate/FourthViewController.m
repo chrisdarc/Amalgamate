@@ -16,18 +16,26 @@
 
 @implementation FourthViewController
 
-
--(IBAction)temp:(id)sender{
-        TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
-    TWTRSession *sssion;
-        TWTRSession *lastSession = store.session;
-        NSArray *sessions = [store existingUserSessions];
-        TWTRSession *specificSession = [store sessionForUserID:@"123"];
-    
-    NSLog([lastSession userName]);
-    
-   
+- (IBAction)updateAccounts:(id)sender{
+    a1=account1.text;
+    a2=account2.text;
+    a3=account3.text;
+    a4=account4.text;
 }
+
+-(NSString*)getA1{
+    return a1;
+}
+-(NSString*)getA2{
+    return a2;
+}
+-(NSString*)getA3{
+    return a3;
+}
+-(NSString*)getA4{
+    return a4;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];    

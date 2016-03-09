@@ -12,6 +12,7 @@
     IBOutlet UIButton* uBGo;
     IBOutlet UILabel* uLkeyword;
     IBOutlet UITextField* uUserInput;
+    IBOutlet UIImageView *Background;
 }
 - (IBAction)ugo:(id)sender;
 

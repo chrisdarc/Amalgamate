@@ -29,6 +29,10 @@
 		A56A4FEB424A5D675373924B /* Pods_Amalgamate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06FAC588E1009EF23C61AC8 /* Pods_Amalgamate.framework */; };
 		FF6565F71C8BD82C0087943E /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6565F61C8BD82C0087943E /* TweetViewController.m */; };
 		FF6565FA1C8BDFDE0087943E /* TWuserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6565F91C8BDFDE0087943E /* TWuserViewController.m */; };
+		FF78C80C1C8FF6B30045A27B /* Account1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF78C80B1C8FF6B30045A27B /* Account1ViewController.m */; };
+		FF78C80F1C8FF88A0045A27B /* Account2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF78C80E1C8FF88A0045A27B /* Account2ViewController.m */; };
+		FF78C8121C8FF8980045A27B /* Account3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF78C8111C8FF8980045A27B /* Account3ViewController.m */; };
+		FF78C8151C8FF8A60045A27B /* Account4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF78C8141C8FF8A60045A27B /* Account4ViewController.m */; };
 		FFAEDFA61C865E0B00DFD28F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAEDFA51C865E0B00DFD28F /* Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +83,14 @@
 		FF6565F61C8BD82C0087943E /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
 		FF6565F81C8BDFDE0087943E /* TWuserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWuserViewController.h; sourceTree = "<group>"; };
 		FF6565F91C8BDFDE0087943E /* TWuserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWuserViewController.m; sourceTree = "<group>"; };
+		FF78C80A1C8FF6B30045A27B /* Account1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account1ViewController.h; sourceTree = "<group>"; };
+		FF78C80B1C8FF6B30045A27B /* Account1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account1ViewController.m; sourceTree = "<group>"; };
+		FF78C80D1C8FF88A0045A27B /* Account2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account2ViewController.h; sourceTree = "<group>"; };
+		FF78C80E1C8FF88A0045A27B /* Account2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account2ViewController.m; sourceTree = "<group>"; };
+		FF78C8101C8FF8980045A27B /* Account3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account3ViewController.h; sourceTree = "<group>"; };
+		FF78C8111C8FF8980045A27B /* Account3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account3ViewController.m; sourceTree = "<group>"; };
+		FF78C8131C8FF8A60045A27B /* Account4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account4ViewController.h; sourceTree = "<group>"; };
+		FF78C8141C8FF8A60045A27B /* Account4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account4ViewController.m; sourceTree = "<group>"; };
 		FFAEDFA51C865E0B00DFD28F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -169,6 +181,14 @@
 				FF6565F61C8BD82C0087943E /* TweetViewController.m */,
 				FF6565F81C8BDFDE0087943E /* TWuserViewController.h */,
 				FF6565F91C8BDFDE0087943E /* TWuserViewController.m */,
+				FF78C80A1C8FF6B30045A27B /* Account1ViewController.h */,
+				FF78C80B1C8FF6B30045A27B /* Account1ViewController.m */,
+				FF78C80D1C8FF88A0045A27B /* Account2ViewController.h */,
+				FF78C80E1C8FF88A0045A27B /* Account2ViewController.m */,
+				FF78C8101C8FF8980045A27B /* Account3ViewController.h */,
+				FF78C8111C8FF8980045A27B /* Account3ViewController.m */,
+				FF78C8131C8FF8A60045A27B /* Account4ViewController.h */,
+				FF78C8141C8FF8A60045A27B /* Account4ViewController.m */,
 			);
 			path = Amalgamate;
 			sourceTree = "<group>";
@@ -376,12 +396,16 @@
 			files = (
 				FF6565F71C8BD82C0087943E /* TweetViewController.m in Sources */,
 				8369FCB91C838F8A00036809 /* SecondViewController.m in Sources */,
+				FF78C80F1C8FF88A0045A27B /* Account2ViewController.m in Sources */,
 				8369FCE61C83A0FA00036809 /* FourthViewController.m in Sources */,
 				FF6565FA1C8BDFDE0087943E /* TWuserViewController.m in Sources */,
 				8369FCE71C83A0FA00036809 /* ThirdViewController.m in Sources */,
+				FF78C8121C8FF8980045A27B /* Account3ViewController.m in Sources */,
+				FF78C8151C8FF8A60045A27B /* Account4ViewController.m in Sources */,
 				83CC43691C83A8B30055A0AD /* Login.m in Sources */,
 				8369FCB31C838F8A00036809 /* AppDelegate.m in Sources */,
 				8369FCB61C838F8A00036809 /* FirstViewController.m in Sources */,
+				FF78C80C1C8FF6B30045A27B /* Account1ViewController.m in Sources */,
 				8369FCB01C838F8A00036809 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

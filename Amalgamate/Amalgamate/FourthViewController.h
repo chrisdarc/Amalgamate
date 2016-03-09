@@ -20,10 +20,13 @@ static NSString *a4;
     IBOutlet UITextField* account2;
     IBOutlet UITextField* account3;
     IBOutlet UITextField* account4;
+    IBOutlet UIButton* TWaccounts;
+    IBOutlet UIButton* Update;
     
 }
 
 -(IBAction)displayLogin:(id)sender;
+-(IBAction)TWac:(id)sender;
 - (IBAction)updateAccounts:(id)sender;
 -(NSString*)getA1;
 -(NSString*)getA2;

@@ -7,8 +7,6 @@
 //
 
 #import "ManageViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface ManageViewController ()
 

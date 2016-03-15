@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @protocol ManageViewControllerDelegate <NSObject>
 -(void)didDismissViewController:(UIViewController*)vc;
@@ -18,5 +20,12 @@
 
 
 -(IBAction)dismissLoginScreen:(id)sender;
+
+- (void)  loginButton:  (FBSDKLoginButton *)loginButton
+didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
+                error:  (NSError *)error;
+
+- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton;
+
 
 @end

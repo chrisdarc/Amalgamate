@@ -50,6 +50,7 @@
             <key>CFBundleURLSchemes</key>
             <array>
                 <string>fb1544428352517201</string>
+                <string>fbauth2</string>
             </array>
         </dict>
     </array>
@@ -79,6 +80,11 @@
             </dict>
         </dict>
     </dict>
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbauth2</string>
+    </array>
     
 </dict>
 </plist>

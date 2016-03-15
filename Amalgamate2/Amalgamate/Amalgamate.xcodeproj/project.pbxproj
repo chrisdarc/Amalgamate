@@ -18,8 +18,8 @@
 		83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DEC1C97281B001DCCF4 /* SearchViewController.m */; };
 		83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DF51C9751D1001DCCF4 /* ManageViewController.m */; };
 		83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83927DF61C9751D1001DCCF4 /* ManageViewController.xib */; };
-		83927DFD1C978B27001DCCF4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83927DFC1C978B27001DCCF4 /* FBSDKCoreKit.framework */; };
-		83927DFF1C97CBF7001DCCF4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83927DFE1C97CBF7001DCCF4 /* FBSDKLoginKit.framework */; };
+		83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */; };
+		83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		83927DF41C9751D1001DCCF4 /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
 		83927DF51C9751D1001DCCF4 /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
 		83927DF61C9751D1001DCCF4 /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
-		83927DFC1C978B27001DCCF4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		83927DFE1C97CBF7001DCCF4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83927DFF1C97CBF7001DCCF4 /* FBSDKLoginKit.framework in Frameworks */,
-				83927DFD1C978B27001DCCF4 /* FBSDKCoreKit.framework in Frameworks */,
+				83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */,
+				83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +163,8 @@
 		83927DFB1C978ACA001DCCF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83927DFE1C97CBF7001DCCF4 /* FBSDKLoginKit.framework */,
-				83927DFC1C978B27001DCCF4 /* FBSDKCoreKit.framework */,
+				83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */,
+				83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -538,6 +538,7 @@
 				83927DE41C972571001DCCF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83927DE51C972571001DCCF4 /* Build configuration list for PBXNativeTarget "AmalgamateTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +547,7 @@
 				83927DE71C972571001DCCF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83927DE81C972571001DCCF4 /* Build configuration list for PBXNativeTarget "AmalgamateUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +556,7 @@
 				83927DEA1C972571001DCCF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

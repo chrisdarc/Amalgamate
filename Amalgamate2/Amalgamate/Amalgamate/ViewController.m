@@ -19,14 +19,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     searchTermData = [SearchTermData new];
+    
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
     [searchTermData getSearchTermsString];
-    [searchTermData getSearchTermsStringTwitter];
-    [self refreshFeed];
+    
+    NSString * twitterSearchQuery = [searchTermData getSearchTermsStringTwitter];
+    TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
+    self.dataSource = [[TWTRSearchTimelineDataSource alloc] initWithSearchQuery:twitterSearchQuery APIClient:client];
+    
+    //[self refreshFeed];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,38 +58,38 @@
     [self refreshFeed];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    //number of sections to display social media
-    return (1);
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    //number of posts currently available to display?
-    return (25);
-}
-
--(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell* cellToReturn = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    
-    if(cellToReturn == nil)
-    {
-        cellToReturn = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"Cell"];
-    }
-    
-    //Call a get content function and put content here.
-    cellToReturn.textLabel.text = [NSString stringWithFormat:@"%ld %s", (long)indexPath.row, "Social Media Content"];
-    
-    return (cellToReturn);
-}
-
-//function to get content from facebook?
--(void) getContent
-{
-    return;
-}
+//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    //number of sections to display social media
+//    return (1);
+//}
+//
+//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    //number of posts currently available to display?
+//    return (25);
+//}
+//
+//-(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UITableViewCell* cellToReturn = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+//    
+//    if(cellToReturn == nil)
+//    {
+//        cellToReturn = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"Cell"];
+//    }
+//    
+//    //Call a get content function and put content here.
+//    cellToReturn.textLabel.text = [NSString stringWithFormat:@"%ld %s", (long)indexPath.row, "Social Media Content"];
+//    
+//    return (cellToReturn);
+//}
+//
+////function to get content from facebook?
+//-(void) getContent
+//{
+//    return;
+//}
 
 
  #pragma mark - Navigation

@@ -10,8 +10,10 @@
 #import "SearchViewController.h"
 #import "ManageViewController.h"
 #import "SearchTermData.h"
+#import <UIKit/UIKit.h>
+#import <TwitterKit/TwitterKit.h>
 
-@interface ViewController : UIViewController <ManageViewControllerDelegate>
+@interface ViewController : TWTRTimelineViewController <ManageViewControllerDelegate>
 {
     IBOutlet UITableView* feed;
 }

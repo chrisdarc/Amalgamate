@@ -19,8 +19,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //initialize data structure that holds search terms
-    searchTerms = [[NSMutableArray alloc]initWithObjects:@"Test Search Term", nil];
+    //Load search terms previously saved
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray * storedArray= [userDefaults objectForKey:@"tableViewSearchTerms"];
+    if (storedArray == nil)
+    {
+        //initialize data structure that holds search terms
+        searchTerms = [[NSMutableArray alloc]initWithObjects: @"First", nil];//@"Test Search Term", nil];
+    }
+    else
+    {
+        //make search terms equal to the array that is stored
+        searchTerms = [[NSMutableArray alloc]initWithArray:storedArray];
+    }
     
     //edit button, but don't need
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -28,6 +39,13 @@
     //add button
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
+}
+
+-(void)saveArray
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:searchTerms forKey:@"tableViewSearchTerms"];
+    [userDefaults synchronize];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,9 +62,37 @@
 -(void)insertNewObject
 {
     //display a UIAlertView
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Enter Number" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Enter a Search Term" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+//    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+//    [alert show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a SearchTerm" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){NSLog(@"Cancel Action");}];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField)
+     {
+         textField.placeholder = NSLocalizedString(@"Keyword", @"KeywordPlaceholder");
+         
+     }];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", "OK action") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action)
+                               {
+                                   NSString *term = alert.textFields.firstObject.text;
+                                   NSLog(@"%@", term);
+                                   if(!searchTerms)
+                                   {
+                                       searchTerms = [[NSMutableArray alloc]init];
+                                   }
+                                   [searchTerms insertObject:term atIndex:0];
+                                   
+                                   //save here
+                                   [self saveArray];
+                                   
+                                   NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                                   
+                                   [self.searchTable insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                               }];
+    [alert addAction:cancelAction];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
@@ -93,32 +139,37 @@
     {
         //removes from array
         [searchTerms removeObjectAtIndex:indexPath.row];
+        //save
+        [self saveArray];
         
         //remove from table view
         [searchTable deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
-#pragma mark - UIAlertViewDelegate methods
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    //ok button
-    if(buttonIndex == 1)
-    {
-        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
-        
-        if(!searchTerms)
-        {
-            searchTerms = [[NSMutableArray alloc]init];
-        }
-        [searchTerms insertObject:tempTextField atIndex:0];
-        
-        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        
-        [self.searchTable insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-    
-}
+//#pragma mark - UIAlertViewDelegate methods
+//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    //ok button
+//    if(buttonIndex == 1)
+//    {
+//        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
+//        
+//        if(!searchTerms)
+//        {
+//            searchTerms = [[NSMutableArray alloc]init];
+//        }
+//        [searchTerms insertObject:tempTextField atIndex:0];
+//        
+//        //save here
+//        [self saveArray];
+//        
+//        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//        
+//        [self.searchTable insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    }
+//    
+//}
 
 
 /*

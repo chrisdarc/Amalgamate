@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSMutableArray * searchTerms;
 
+-(void)saveArray;
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;

@@ -13,15 +13,19 @@
 @end
 
 @implementation ViewController
+@synthesize searchTermData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    searchTermData = [SearchTermData new];
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
+    [searchTermData getSearchTermsString];
+    [searchTermData getSearchTermsStringTwitter];
     [self refreshFeed];
 }
 

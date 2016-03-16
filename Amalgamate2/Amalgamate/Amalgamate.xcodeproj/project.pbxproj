@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83245BEC1C99FFA6000C6EBD /* SearchTermData.m in Sources */ = {isa = PBXBuildFile; fileRef = 83245BEB1C99FFA6000C6EBD /* SearchTermData.m */; };
 		83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F411C99F45900B799A2 /* Fabric.framework */; };
 		83657F461C99F45900B799A2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F421C99F45900B799A2 /* TwitterKit.framework */; };
 		83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83657F431C99F45900B799A2 /* TwitterKitResources.bundle */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83245BEA1C99FFA6000C6EBD /* SearchTermData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTermData.h; sourceTree = "<group>"; };
+		83245BEB1C99FFA6000C6EBD /* SearchTermData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTermData.m; sourceTree = "<group>"; };
 		83657F411C99F45900B799A2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		83657F421C99F45900B799A2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		83657F431C99F45900B799A2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				83927DC41C972571001DCCF4 /* Assets.xcassets */,
 				83927DC61C972571001DCCF4 /* LaunchScreen.storyboard */,
 				83927DC91C972571001DCCF4 /* Info.plist */,
+				83245BEA1C99FFA6000C6EBD /* SearchTermData.h */,
+				83245BEB1C99FFA6000C6EBD /* SearchTermData.m */,
 				83927DB81C972570001DCCF4 /* Supporting Files */,
 			);
 			path = Amalgamate;
@@ -334,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83927DC01C972570001DCCF4 /* ViewController.m in Sources */,
+				83245BEC1C99FFA6000C6EBD /* SearchTermData.m in Sources */,
 				83927DBD1C972570001DCCF4 /* AppDelegate.m in Sources */,
 				83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */,
 				83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */,

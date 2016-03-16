@@ -19,6 +19,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //load search terms previously saved
+    [self loadArray];
+    
+    //edit button, but don't need
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    //add button
+    UIBarButtonItem * addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
+-(void)loadArray
+{
     //Load search terms previously saved
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray * storedArray= [userDefaults objectForKey:@"tableViewSearchTerms"];
@@ -32,13 +45,6 @@
         //make search terms equal to the array that is stored
         searchTerms = [[NSMutableArray alloc]initWithArray:storedArray];
     }
-    
-    //edit button, but don't need
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    //add button
-    UIBarButtonItem * addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
-    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 -(void)saveArray

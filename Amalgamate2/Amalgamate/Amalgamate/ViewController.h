@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SearchViewController.h"
 #import "ManageViewController.h"
+#import "SearchTermData.h"
 
 @interface ViewController : UIViewController <ManageViewControllerDelegate>
 {
     IBOutlet UITableView* feed;
 }
+
+@property SearchTermData * searchTermData;
 
 -(void) viewDidAppear:(BOOL)animated;
 

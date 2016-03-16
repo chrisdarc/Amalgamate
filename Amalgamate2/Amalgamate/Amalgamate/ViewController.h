@@ -30,11 +30,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
--(void) getContent;
+//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+//
+//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+//
+//-(void) getContent;
 
 @end
 

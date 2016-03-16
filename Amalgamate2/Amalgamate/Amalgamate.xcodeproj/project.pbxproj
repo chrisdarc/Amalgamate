@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F411C99F45900B799A2 /* Fabric.framework */; };
+		83657F461C99F45900B799A2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F421C99F45900B799A2 /* TwitterKit.framework */; };
+		83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83657F431C99F45900B799A2 /* TwitterKitResources.bundle */; };
+		83657F481C99F45900B799A2 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F441C99F45900B799A2 /* TwitterCore.framework */; };
 		83927DBA1C972570001DCCF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DB91C972570001DCCF4 /* main.m */; };
 		83927DBD1C972570001DCCF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DBC1C972570001DCCF4 /* AppDelegate.m */; };
 		83927DC01C972570001DCCF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DBF1C972570001DCCF4 /* ViewController.m */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83657F411C99F45900B799A2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		83657F421C99F45900B799A2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		83657F431C99F45900B799A2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		83657F441C99F45900B799A2 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		83927DB51C972570001DCCF4 /* Amalgamate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amalgamate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83927DB91C972570001DCCF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83927DBB1C972570001DCCF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,8 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83657F481C99F45900B799A2 /* TwitterCore.framework in Frameworks */,
 				83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */,
 				83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */,
+				83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */,
+				83657F461C99F45900B799A2 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +111,10 @@
 				83927DD11C972571001DCCF4 /* AmalgamateTests */,
 				83927DDC1C972571001DCCF4 /* AmalgamateUITests */,
 				83927DB61C972570001DCCF4 /* Products */,
+				83657F411C99F45900B799A2 /* Fabric.framework */,
+				83657F421C99F45900B799A2 /* TwitterKit.framework */,
+				83657F431C99F45900B799A2 /* TwitterKitResources.bundle */,
+				83657F441C99F45900B799A2 /* TwitterCore.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +194,7 @@
 				83927DB11C972570001DCCF4 /* Sources */,
 				83927DB21C972570001DCCF4 /* Frameworks */,
 				83927DB31C972570001DCCF4 /* Resources */,
+				83657F401C99F42E00B799A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -276,6 +292,7 @@
 				83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */,
 				83927DC51C972571001DCCF4 /* Assets.xcassets in Resources */,
 				83927DC31C972570001DCCF4 /* Main.storyboard in Resources */,
+				83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +311,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83657F401C99F42E00B799A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d0a3e2da71a44b118a420a240fea66925992bbfc eb2c3c8574a0262858bb2cd3fa01a4c6951775c1f67d43bec0deb7e646ca73e5";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83927DB11C972570001DCCF4 /* Sources */ = {
@@ -451,7 +484,7 @@
 				);
 				INFOPLIST_FILE = Amalgamate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Group10.Amalgamate;
+				PRODUCT_BUNDLE_IDENTIFIER = C398Group10.Amalgamate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -466,7 +499,7 @@
 				);
 				INFOPLIST_FILE = Amalgamate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Group10.Amalgamate;
+				PRODUCT_BUNDLE_IDENTIFIER = C398Group10.Amalgamate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

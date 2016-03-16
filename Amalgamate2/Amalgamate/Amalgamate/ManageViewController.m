@@ -7,6 +7,8 @@
 //
 
 #import "ManageViewController.h"
+#import <TwitterKit/TwitterKit.h>
+
 
 @interface ManageViewController ()
 
@@ -17,10 +19,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    FBSDKLoginButton *loginButtonFB = [[FBSDKLoginButton alloc] init];
     // Optional: Place the button in the center of your view.
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
+//    loginButton.center = self.view.center;
+//    [self.view addSubview:loginButton];
+    CGPoint fbPoint = CGPointMake(187.5, 250);
+    loginButtonFB.center = fbPoint;
+    
+    
+    [self.view addSubview:loginButtonFB];
+    
+    TWTRLogInButton *loginButtonTW = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
+        if (session) {
+            // Callback for login success or failure. The TWTRSession
+            // is also available on the [Twitter sharedInstance]
+            // singleton.
+            //
+            // Here we pop an alert just to give an example of how
+            // to read Twitter user info out of a TWTRSession.
+            //
+            // TODO: Remove alert and use the TWTRSession's userID
+            // with your app's user model
+            NSString *message = [NSString stringWithFormat:@"@%@ logged in! (%@)",
+                                 [session userName], [session userID]];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Logged in!"
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else {
+            NSLog(@"Login error: %@", [error localizedDescription]);
+        }
+    }];
+    
+    // TODO: Change where the log in button is positioned in your view
+    CGPoint loc=CGPointMake(187.5, 315);
+    loginButtonTW.center = loc;
+    [self.view addSubview:loginButtonTW];
+    
+//    [loginButtonFBParent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[loginButtonFB(==loginButtonTW)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(loginButtonFB, loginButtonTW)]];
+//    [loginButtonFBParent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[loginButtonFB(==loginButtonTW)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(loginButtonFB, loginButtonTW)]];
+//    [loginButtonFB addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[loginButtonFB(>=100)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(loginButtonFB)]];
+//    [loginButtonFB addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[loginButtonFB(>=26)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(loginButtonFB)]];
+    
+
     
 }
 

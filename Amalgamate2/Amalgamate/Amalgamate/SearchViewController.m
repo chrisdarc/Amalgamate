@@ -13,12 +13,21 @@
 @end
 
 @implementation SearchViewController
+@synthesize searchTable, searchTerms;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tableView.allowsMultipleSelectionDuringEditing = NO;
-
+    
+    //initialize data structure that holds search terms
+    searchTerms = [[NSMutableArray alloc]initWithObjects:@"Test Search Term", nil];
+    
+    //edit button, but don't need
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    //add button
+    UIBarButtonItem * addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +35,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [searchTable setEditing:editing animated:animated];
+}
 
+-(void)insertNewObject
+{
+    //display a UIAlertView
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Enter Number" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
+
+//Table View Stuff
+#pragma mark - UITableView Datasource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     //number of sections to display social media
@@ -35,38 +60,64 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //number of posts currently available to display?
-    return (25);
+    //number of terms in the searchTerms
+    return searchTerms.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cellToReturn = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    static NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell* cellToReturn = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if(cellToReturn == nil)
     {
-        cellToReturn = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"Cell"];
+        cellToReturn = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
     }
     
     //Call a get content function and put content here.
-    cellToReturn.textLabel.text = [NSString stringWithFormat:@"%ld %s", (long)indexPath.row, "Search Term/Keyword"];
+    cellToReturn.textLabel.text = [searchTerms objectAtIndex: indexPath.row];
     
     return (cellToReturn);
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *) indexPath
+{
+    return YES;
 }
 
 // Swipe to delete.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        [ removeObjectAtIndex:indexPath.row];
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        //removes from array
+        [searchTerms removeObjectAtIndex:indexPath.row];
+        
+        //remove from table view
+        [searchTable deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
-//function to get content from facebook?
--(void) getContent
+#pragma mark - UIAlertViewDelegate methods
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    return;
+    //ok button
+    if(buttonIndex == 1)
+    {
+        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
+        
+        if(!searchTerms)
+        {
+            searchTerms = [[NSMutableArray alloc]init];
+        }
+        [searchTerms insertObject:tempTextField atIndex:0];
+        
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        [self.searchTable insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
 }
 
 

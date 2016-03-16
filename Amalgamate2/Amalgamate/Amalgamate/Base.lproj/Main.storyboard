@@ -67,12 +67,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Amalgamate" id="Hwn-dj-Jh5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nWk-Jn-SYg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Amalgamate" id="Hwn-dj-Jh5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="searchTerms" destination="8Eq-Qo-Vhe" id="dwm-Pj-5wG"/>
+                        <outlet property="searchTable" destination="8Eq-Qo-Vhe" id="ilf-Mg-89J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSC-h3-XDd" userLabel="First Responder" sceneMemberID="firstResponder"/>

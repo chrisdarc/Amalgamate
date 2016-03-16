@@ -9,16 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchViewController : UIViewController
-{
-    IBOutlet UITableView* searchTerms;
-}
+<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
-@property UITableView* tableView;
+@property (weak, nonatomic) IBOutlet UITableView* searchTable;
+
+@property (strong, nonatomic) NSMutableArray * searchTerms;
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
--(void) getContent;
 
 @end

@@ -28,6 +28,8 @@
     //add button
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
 }
 
 -(void)loadArray

@@ -32,6 +32,8 @@
     [super viewDidLoad];
     searchTermData = [SearchTermData new];
     
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
     //self.navigationItem.title = @"Amalgamate";
     
 //    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector (dismissMasterViewController)];
@@ -39,51 +41,71 @@
 //    
 //    self.navigationItem.rightBarButtonItem = doneButton;
    
+}
 
-//The wrong way
-//   NSURL* myURL = [ NSURL URLWithString: @"http://nbctv.tumblr.com/api/read/json" ];
-//   
-////   NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
-//   
-//   NSString* stringFromSource = [ NSString stringWithContentsOfURL: myURL encoding: NSUTF8StringEncoding error: nil ];
-//   
-//   NSLog( @"%@", stringFromSource );
+
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    //The wrong way
+    //   NSURL* myURL = [ NSURL URLWithString: @"http://nbctv.tumblr.com/api/read/json" ];
+    //
+    ////   NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
+    //
+    //   NSString* stringFromSource = [ NSString stringWithContentsOfURL: myURL encoding: NSUTF8StringEncoding error: nil ];
+    //
+    //   NSLog( @"%@", stringFromSource );
     NSString* TBusername;
     TBViewController *obj = [[TBViewController alloc] init];
     //TBusername=obj.getTBUserName;
     TBusername= [searchTermData getSearchTermsStringTumblr];
     NSString* myJSON=[NSString stringWithFormat:@"%@%@%@",@"https://api.tumblr.com/v2/tagged?tag=",TBusername,@"&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4"];
-   NSURL* myURL = [ NSURL URLWithString: myJSON ];
-   
-   NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
-   AFHTTPRequestOperation* myOperation = [ [ AFHTTPRequestOperation alloc ] initWithRequest:myRequest ];
-   
-   [ myOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
-   {
-      NSString* stringFromSource = [ [ NSString alloc ] initWithData: responseObject encoding: NSUTF8StringEncoding ];
-      
-     //NSLog( @"%@", stringFromSource );
-
-      self.postFromData = [ [ TumblrPost alloc ] initWithData: responseObject ];
-
-      [ self.tableView reloadData ];
-      
-   } failure:^(AFHTTPRequestOperation *operation, NSError *error)
-   {
-      self.postFromData = nil;
-
-      [ self.tableView reloadData ];
-   }];
-   
-   [ myOperation start ];
+    NSURL* myURL = [ NSURL URLWithString: myJSON ];
+    
+    NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
+    AFHTTPRequestOperation* myOperation = [ [ AFHTTPRequestOperation alloc ] initWithRequest:myRequest ];
+    
+    [ myOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSString* stringFromSource = [ [ NSString alloc ] initWithData: responseObject encoding: NSUTF8StringEncoding ];
+         
+         //NSLog( @"%@", stringFromSource );
+         
+         self.postFromData = [ [ TumblrPost alloc ] initWithData: responseObject ];
+         
+         [ self.tableView reloadData ];
+         
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         self.postFromData = nil;
+         
+         [ self.tableView reloadData ];
+     }];
+    
+    [ myOperation start ];
+    
 }
-
 
 
 - (void)didReceiveMemoryWarning
 {
    [super didReceiveMemoryWarning];
    // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)managePressed:(id)sender
+{
+    ManageViewController* manageScreen = [[ManageViewController alloc] initWithNibName:@"ManageViewController" bundle: nil];
+    //    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: manageScreen];
+    manageScreen.delegate = self;
+    [self presentViewController: manageScreen animated:YES completion:nil];//]: enclosingNav animated: YES completion:nil];
+}
+
+-(void)didDismissViewController:(UIViewController*)vc
+{
+    NSLog(@"Dismissed !!!!!");
 }
 
 
@@ -108,6 +130,17 @@
         selectFeedViewController.delegate = self;
         [self presentViewController: enclosingNav animated: YES completion:nil];
     }
+    if ([[segue identifier] isEqualToString:@"toSearchFromTumblr"])
+    {
+        
+        // Get reference to the destination view controller
+        SearchViewController *SearchScreen;
+        SearchScreen = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        //[vc setMyObjectHere:object];
+    }
+    
 }
 
 

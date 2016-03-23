@@ -27,6 +27,34 @@
 		83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */; };
 		83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */; };
 		83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */; };
+		FFA0908C1CA2315500ADFAC4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090831CA2315500ADFAC4 /* MasterViewController.m */; };
+		FFA0908D1CA2315500ADFAC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090851CA2315500ADFAC4 /* DetailViewController.m */; };
+		FFA0908E1CA2315500ADFAC4 /* TumblrIndividualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */; };
+		FFA0908F1CA2315500ADFAC4 /* TumblrPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090891CA2315500ADFAC4 /* TumblrPost.m */; };
+		FFA090901CA2315500ADFAC4 /* TBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA0908B1CA2315500ADFAC4 /* TBViewController.m */; };
+		FFA090BF1CA2318000ADFAC4 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090941CA2318000ADFAC4 /* SBJsonUTF8Stream.m */; };
+		FFA090C01CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090951CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m */; };
+		FFA090C11CA2318000ADFAC4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090961CA2318000ADFAC4 /* SBJsonWriter.m */; };
+		FFA090C21CA2318000ADFAC4 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090991CA2318000ADFAC4 /* SBJsonStreamParser.m */; };
+		FFA090C31CA2318000ADFAC4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA0909A1CA2318000ADFAC4 /* SBJsonParser.m */; };
+		FFA090C41CA2318000ADFAC4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090A11CA2318000ADFAC4 /* AFNetworkReachabilityManager.m */; };
+		FFA090C51CA2318000ADFAC4 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090A41CA2318000ADFAC4 /* AFURLRequestSerialization.m */; };
+		FFA090C61CA2318000ADFAC4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090A51CA2318000ADFAC4 /* AFURLResponseSerialization.m */; };
+		FFA090C71CA2318000ADFAC4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090A61CA2318000ADFAC4 /* AFURLSessionManager.m */; };
+		FFA090C81CA2318000ADFAC4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090A91CA2318000ADFAC4 /* AFHTTPRequestOperationManager.m */; };
+		FFA090C91CA2318000ADFAC4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090AA1CA2318000ADFAC4 /* AFSecurityPolicy.m */; };
+		FFA090CA1CA2318000ADFAC4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090AC1CA2318000ADFAC4 /* AFHTTPRequestOperation.m */; };
+		FFA090CB1CA2318000ADFAC4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090AF1CA2318000ADFAC4 /* AFHTTPSessionManager.m */; };
+		FFA090CC1CA2318000ADFAC4 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090B01CA2318000ADFAC4 /* AFURLConnectionOperation.m */; };
+		FFA090CD1CA2318000ADFAC4 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090B21CA2318000ADFAC4 /* SBJsonTokeniser.m */; };
+		FFA090CE1CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090B61CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.m */; };
+		FFA090CF1CA2318000ADFAC4 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090B91CA2318000ADFAC4 /* NSObject+SBJson.m */; };
+		FFA090D01CA2318000ADFAC4 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090BA1CA2318000ADFAC4 /* SBJsonStreamWriter.m */; };
+		FFA090D11CA2318000ADFAC4 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090BB1CA2318000ADFAC4 /* SBJsonStreamParserState.m */; };
+		FFA090D21CA2318000ADFAC4 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090BC1CA2318000ADFAC4 /* SBJsonStreamParserAdapter.m */; };
+		FFA090D31CA2318000ADFAC4 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090BE1CA2318000ADFAC4 /* SBJsonStreamWriterState.m */; };
+		FFA090D81CA233FF00ADFAC4 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090D51CA233FF00ADFAC4 /* GTMNSString+HTML.m */; };
+		FFA090D91CA233FF00ADFAC4 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090D71CA233FF00ADFAC4 /* NSString+HTML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +107,65 @@
 		83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFeedViewController.xib; sourceTree = "<group>"; };
 		83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FFA090811CA2315500ADFAC4 /* CommonIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonIncludes.h; sourceTree = "<group>"; };
+		FFA090821CA2315500ADFAC4 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		FFA090831CA2315500ADFAC4 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		FFA090841CA2315500ADFAC4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FFA090851CA2315500ADFAC4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FFA090861CA2315500ADFAC4 /* TumblrIndividualObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrIndividualObject.h; sourceTree = "<group>"; };
+		FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrIndividualObject.m; sourceTree = "<group>"; };
+		FFA090881CA2315500ADFAC4 /* TumblrPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrPost.h; sourceTree = "<group>"; };
+		FFA090891CA2315500ADFAC4 /* TumblrPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrPost.m; sourceTree = "<group>"; };
+		FFA0908A1CA2315500ADFAC4 /* TBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBViewController.h; sourceTree = "<group>"; };
+		FFA0908B1CA2315500ADFAC4 /* TBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBViewController.m; sourceTree = "<group>"; };
+		FFA090921CA2318000ADFAC4 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		FFA090931CA2318000ADFAC4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		FFA090941CA2318000ADFAC4 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		FFA090951CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		FFA090961CA2318000ADFAC4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		FFA090971CA2318000ADFAC4 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		FFA090981CA2318000ADFAC4 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		FFA090991CA2318000ADFAC4 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		FFA0909A1CA2318000ADFAC4 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		FFA0909B1CA2318000ADFAC4 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		FFA0909C1CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		FFA0909E1CA2318000ADFAC4 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		FFA0909F1CA2318000ADFAC4 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		FFA090A01CA2318000ADFAC4 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		FFA090A11CA2318000ADFAC4 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		FFA090A21CA2318000ADFAC4 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		FFA090A31CA2318000ADFAC4 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		FFA090A41CA2318000ADFAC4 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		FFA090A51CA2318000ADFAC4 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		FFA090A61CA2318000ADFAC4 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		FFA090A71CA2318000ADFAC4 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		FFA090A81CA2318000ADFAC4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		FFA090A91CA2318000ADFAC4 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		FFA090AA1CA2318000ADFAC4 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		FFA090AB1CA2318000ADFAC4 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		FFA090AC1CA2318000ADFAC4 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		FFA090AD1CA2318000ADFAC4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		FFA090AE1CA2318000ADFAC4 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		FFA090AF1CA2318000ADFAC4 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		FFA090B01CA2318000ADFAC4 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		FFA090B11CA2318000ADFAC4 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		FFA090B21CA2318000ADFAC4 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		FFA090B31CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		FFA090B41CA2318000ADFAC4 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		FFA090B51CA2318000ADFAC4 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		FFA090B61CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		FFA090B71CA2318000ADFAC4 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		FFA090B81CA2318000ADFAC4 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		FFA090B91CA2318000ADFAC4 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		FFA090BA1CA2318000ADFAC4 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		FFA090BB1CA2318000ADFAC4 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		FFA090BC1CA2318000ADFAC4 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		FFA090BD1CA2318000ADFAC4 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		FFA090BE1CA2318000ADFAC4 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		FFA090D41CA233FF00ADFAC4 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		FFA090D51CA233FF00ADFAC4 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		FFA090D61CA233FF00ADFAC4 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		FFA090D71CA233FF00ADFAC4 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +201,9 @@
 		83927DAC1C972570001DCCF4 = {
 			isa = PBXGroup;
 			children = (
+				FFA0909D1CA2318000ADFAC4 /* AFNetworking */,
+				FFA090911CA2318000ADFAC4 /* SBJson */,
+				FFA090801CA2314800ADFAC4 /* Tumblr */,
 				83927DB71C972570001DCCF4 /* Amalgamate */,
 				83927DFB1C978ACA001DCCF4 /* Frameworks */,
 				83927DD11C972571001DCCF4 /* AmalgamateTests */,
@@ -195,6 +285,87 @@
 				83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFA090801CA2314800ADFAC4 /* Tumblr */ = {
+			isa = PBXGroup;
+			children = (
+				FFA090D41CA233FF00ADFAC4 /* GTMNSString+HTML.h */,
+				FFA090D51CA233FF00ADFAC4 /* GTMNSString+HTML.m */,
+				FFA090D61CA233FF00ADFAC4 /* NSString+HTML.h */,
+				FFA090D71CA233FF00ADFAC4 /* NSString+HTML.m */,
+				FFA090811CA2315500ADFAC4 /* CommonIncludes.h */,
+				FFA090821CA2315500ADFAC4 /* MasterViewController.h */,
+				FFA090831CA2315500ADFAC4 /* MasterViewController.m */,
+				FFA090841CA2315500ADFAC4 /* DetailViewController.h */,
+				FFA090851CA2315500ADFAC4 /* DetailViewController.m */,
+				FFA090861CA2315500ADFAC4 /* TumblrIndividualObject.h */,
+				FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */,
+				FFA090881CA2315500ADFAC4 /* TumblrPost.h */,
+				FFA090891CA2315500ADFAC4 /* TumblrPost.m */,
+				FFA0908A1CA2315500ADFAC4 /* TBViewController.h */,
+				FFA0908B1CA2315500ADFAC4 /* TBViewController.m */,
+			);
+			name = Tumblr;
+			sourceTree = "<group>";
+		};
+		FFA090911CA2318000ADFAC4 /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				FFA090921CA2318000ADFAC4 /* SBJsonStreamParserAdapter.h */,
+				FFA090931CA2318000ADFAC4 /* SBJsonWriter.h */,
+				FFA090941CA2318000ADFAC4 /* SBJsonUTF8Stream.m */,
+				FFA090951CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m */,
+				FFA090961CA2318000ADFAC4 /* SBJsonWriter.m */,
+				FFA090971CA2318000ADFAC4 /* SBJsonStreamParser.h */,
+				FFA090981CA2318000ADFAC4 /* SBJsonUTF8Stream.h */,
+				FFA090991CA2318000ADFAC4 /* SBJsonStreamParser.m */,
+				FFA0909A1CA2318000ADFAC4 /* SBJsonParser.m */,
+				FFA0909B1CA2318000ADFAC4 /* SBJsonTokeniser.h */,
+				FFA0909C1CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.h */,
+				FFA090B11CA2318000ADFAC4 /* SBJsonParser.h */,
+				FFA090B21CA2318000ADFAC4 /* SBJsonTokeniser.m */,
+				FFA090B31CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.h */,
+				FFA090B41CA2318000ADFAC4 /* SBJsonStreamWriterState.h */,
+				FFA090B51CA2318000ADFAC4 /* SBJson.h */,
+				FFA090B61CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.m */,
+				FFA090B71CA2318000ADFAC4 /* SBJsonStreamWriter.h */,
+				FFA090B81CA2318000ADFAC4 /* SBJsonStreamParserState.h */,
+				FFA090B91CA2318000ADFAC4 /* NSObject+SBJson.m */,
+				FFA090BA1CA2318000ADFAC4 /* SBJsonStreamWriter.m */,
+				FFA090BB1CA2318000ADFAC4 /* SBJsonStreamParserState.m */,
+				FFA090BC1CA2318000ADFAC4 /* SBJsonStreamParserAdapter.m */,
+				FFA090BD1CA2318000ADFAC4 /* NSObject+SBJson.h */,
+				FFA090BE1CA2318000ADFAC4 /* SBJsonStreamWriterState.m */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
+		FFA0909D1CA2318000ADFAC4 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				FFA0909E1CA2318000ADFAC4 /* AFSecurityPolicy.h */,
+				FFA0909F1CA2318000ADFAC4 /* AFURLResponseSerialization.h */,
+				FFA090A01CA2318000ADFAC4 /* AFURLSessionManager.h */,
+				FFA090A11CA2318000ADFAC4 /* AFNetworkReachabilityManager.m */,
+				FFA090A21CA2318000ADFAC4 /* AFURLRequestSerialization.h */,
+				FFA090A31CA2318000ADFAC4 /* AFHTTPRequestOperationManager.h */,
+				FFA090A41CA2318000ADFAC4 /* AFURLRequestSerialization.m */,
+				FFA090A51CA2318000ADFAC4 /* AFURLResponseSerialization.m */,
+				FFA090A61CA2318000ADFAC4 /* AFURLSessionManager.m */,
+				FFA090A71CA2318000ADFAC4 /* AFNetworkReachabilityManager.h */,
+				FFA090A81CA2318000ADFAC4 /* AFHTTPSessionManager.h */,
+				FFA090A91CA2318000ADFAC4 /* AFHTTPRequestOperationManager.m */,
+				FFA090AA1CA2318000ADFAC4 /* AFSecurityPolicy.m */,
+				FFA090AB1CA2318000ADFAC4 /* AFURLConnectionOperation.h */,
+				FFA090AC1CA2318000ADFAC4 /* AFHTTPRequestOperation.m */,
+				FFA090AD1CA2318000ADFAC4 /* AFHTTPRequestOperation.h */,
+				FFA090AE1CA2318000ADFAC4 /* AFNetworking.h */,
+				FFA090AF1CA2318000ADFAC4 /* AFHTTPSessionManager.m */,
+				FFA090B01CA2318000ADFAC4 /* AFURLConnectionOperation.m */,
+			);
+			name = AFNetworking;
+			path = SBJson/AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,13 +519,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA090CC1CA2318000ADFAC4 /* AFURLConnectionOperation.m in Sources */,
 				83927DC01C972570001DCCF4 /* ViewController.m in Sources */,
+				FFA090C11CA2318000ADFAC4 /* SBJsonWriter.m in Sources */,
+				FFA090C91CA2318000ADFAC4 /* AFSecurityPolicy.m in Sources */,
 				83245BEC1C99FFA6000C6EBD /* SearchTermData.m in Sources */,
+				FFA090C71CA2318000ADFAC4 /* AFURLSessionManager.m in Sources */,
+				FFA0908D1CA2315500ADFAC4 /* DetailViewController.m in Sources */,
+				FFA090D81CA233FF00ADFAC4 /* GTMNSString+HTML.m in Sources */,
+				FFA0908E1CA2315500ADFAC4 /* TumblrIndividualObject.m in Sources */,
 				83927DBD1C972570001DCCF4 /* AppDelegate.m in Sources */,
+				FFA090BF1CA2318000ADFAC4 /* SBJsonUTF8Stream.m in Sources */,
+				FFA090CE1CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				FFA090C21CA2318000ADFAC4 /* SBJsonStreamParser.m in Sources */,
+				FFA090CD1CA2318000ADFAC4 /* SBJsonTokeniser.m in Sources */,
+				FFA090D11CA2318000ADFAC4 /* SBJsonStreamParserState.m in Sources */,
+				FFA090D01CA2318000ADFAC4 /* SBJsonStreamWriter.m in Sources */,
+				FFA090D31CA2318000ADFAC4 /* SBJsonStreamWriterState.m in Sources */,
+				FFA090D91CA233FF00ADFAC4 /* NSString+HTML.m in Sources */,
+				FFA0908F1CA2315500ADFAC4 /* TumblrPost.m in Sources */,
+				FFA090901CA2315500ADFAC4 /* TBViewController.m in Sources */,
+				FFA090CB1CA2318000ADFAC4 /* AFHTTPSessionManager.m in Sources */,
+				FFA090CA1CA2318000ADFAC4 /* AFHTTPRequestOperation.m in Sources */,
+				FFA090C41CA2318000ADFAC4 /* AFNetworkReachabilityManager.m in Sources */,
+				FFA090C31CA2318000ADFAC4 /* SBJsonParser.m in Sources */,
+				FFA090C51CA2318000ADFAC4 /* AFURLRequestSerialization.m in Sources */,
 				83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */,
+				FFA090C61CA2318000ADFAC4 /* AFURLResponseSerialization.m in Sources */,
+				FFA090C81CA2318000ADFAC4 /* AFHTTPRequestOperationManager.m in Sources */,
+				FFA0908C1CA2315500ADFAC4 /* MasterViewController.m in Sources */,
 				83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */,
+				FFA090CF1CA2318000ADFAC4 /* NSObject+SBJson.m in Sources */,
 				83A077FE1CA210E700AF4797 /* SelectFeedViewController.m in Sources */,
+				FFA090C01CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m in Sources */,
 				83927DBA1C972570001DCCF4 /* main.m in Sources */,
+				FFA090D21CA2318000ADFAC4 /* SBJsonStreamParserAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

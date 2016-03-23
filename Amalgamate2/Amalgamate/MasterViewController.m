@@ -45,7 +45,8 @@
 //   NSLog( @"%@", stringFromSource );
     NSString* TBusername;
     TBViewController *obj = [[TBViewController alloc] init];
-    TBusername=obj.getTBUserName;
+    //TBusername=obj.getTBUserName;
+    TBusername=@"dog";
     NSString* myJSON=[NSString stringWithFormat:@"%@%@%@",@"https://api.tumblr.com/v2/tagged?tag=",TBusername,@"&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4"];
    NSURL* myURL = [ NSURL URLWithString: myJSON ];
    
@@ -83,24 +84,9 @@
 
 
 #pragma mark - Segues
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//   if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//       NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//       NSDate *object = self.objects[obj.row];
-//       [[segue destinationViewController] setDetailItem:object];
-//   }
-//}
-
-// pass the link of each post into the detail view
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    // Make sure your segue name in storyboard is the same as this line
-//    if ([[segue identifier] isEqualToString:@"TBpost"])
-//    {
-//        //if you need to pass data to the next controller do it here
-//    }
+
     
     
        if ([[segue identifier] isEqualToString:@"TBpost"]) {
@@ -138,15 +124,6 @@
    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     TumblrIndividualObject* individualPost = [ self.postFromData objectAtIndex: indexPath.row ];
     
-    //
-    //   cell.textLabel.text = individualPost.photoCaption;
-    //   cell.detailTextLabel.text=individualPost.date;
-    //   if ( individualPost.photoData != nil )
-    //   {
-    //      cell.imageView.image = [ [ UIImage alloc ] initWithData: individualPost.photoData ];
-    //       cell.imageView.frame = CGRectMake(0,0,0,0);
-    //       cell.imageView.bounds = CGRectMake(0,0,0,0);
-    //   }
       // ---------------------- add username ----------------------
     UILabel* cellusername = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)];
     

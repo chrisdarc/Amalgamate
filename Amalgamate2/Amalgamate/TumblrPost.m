@@ -151,7 +151,7 @@
        
        
        username=[ postToAdd objectForKey: kblognamekey ];
-      // NSLog(username);
+     // NSLog(username);
                NSString* SURLString = [ postToAdd objectForKey: kSPhotoURLKey ];
        tumblrObject.purl=SURLString;
        tumblrObject.photoCaption=[postToAdd objectForKey:kSphotocaptionKey];

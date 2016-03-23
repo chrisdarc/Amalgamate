@@ -96,6 +96,7 @@
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSString* posturl=[self.postFromData objectAtIndex:indexPath.row].purl;
+        NSLog(posturl);
         [[segue destinationViewController] setDetailItem:posturl];
     }
     
@@ -271,7 +272,7 @@
 -(void)dismissMasterViewController
 {
     [self.delegate didDismissMasterViewController:self];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 

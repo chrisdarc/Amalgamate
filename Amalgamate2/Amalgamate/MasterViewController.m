@@ -20,10 +20,7 @@
 @end
 
 @implementation MasterViewController
-
-
-
-
+@synthesize searchTermData;
 
 
 - (void)awakeFromNib {
@@ -32,7 +29,15 @@
 
 - (void)viewDidLoad
 {
-   [super viewDidLoad];
+    [super viewDidLoad];
+    searchTermData = [SearchTermData new];
+    
+    //self.navigationItem.title = @"Amalgamate";
+    
+//    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector (dismissMasterViewController)];
+//    
+//    
+//    self.navigationItem.rightBarButtonItem = doneButton;
    
 
 //The wrong way
@@ -46,7 +51,7 @@
     NSString* TBusername;
     TBViewController *obj = [[TBViewController alloc] init];
     //TBusername=obj.getTBUserName;
-    TBusername=@"dog";
+    TBusername= [searchTermData getSearchTermsStringTumblr];
     NSString* myJSON=[NSString stringWithFormat:@"%@%@%@",@"https://api.tumblr.com/v2/tagged?tag=",TBusername,@"&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4"];
    NSURL* myURL = [ NSURL URLWithString: myJSON ];
    
@@ -86,18 +91,38 @@
 #pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-
     
+    if ([[segue identifier] isEqualToString:@"TBpost"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSString* posturl=[self.postFromData objectAtIndex:indexPath.row].purl;
+        [[segue destinationViewController] setDetailItem:posturl];
+    }
     
-       if ([[segue identifier] isEqualToString:@"TBpost"]) {
-           NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-           NSString* posturl=[self.postFromData objectAtIndex:indexPath.row].purl;
-           [[segue destinationViewController] setDetailItem:posturl];
-       }
+    if([[segue identifier] isEqualToString:@"toHome"])
+    {
+        SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
+        UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
+        
+        selectFeedViewController.delegate = self;
+        [self presentViewController: enclosingNav animated: YES completion:nil];
+    }
 }
 
 
 
+-(void)didDismissSelectFeedViewController:(UIViewController*)vc
+{
+//    [self.delegate didDismissMasterViewController:self];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"FEED SELECTED, TRYING TO DISMISS TUMBLR SCREEN");
+    
+    //don't know why, need to dimsiss four times to make it actually dismiss
+    [self dismissMasterViewController];
+    [self dismissMasterViewController];
+    [self dismissMasterViewController];
+    [self dismissMasterViewController];
+}
 
 
 
@@ -242,6 +267,14 @@
    
    return cell;
 }
+
+-(void)dismissMasterViewController
+{
+    [self.delegate didDismissMasterViewController:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 
 @end

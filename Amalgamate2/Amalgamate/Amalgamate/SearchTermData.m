@@ -77,7 +77,7 @@
     {
         if(i == 0)
         {
-            temp = [NSString stringWithFormat: @"%@", searchTermArray[i]];
+            temp = [NSString stringWithFormat: @"%s%@", "(" ,searchTermArray[i]];
             searchTermsStr = [NSString stringWithFormat:@"%@", temp];
         }
         else
@@ -86,6 +86,8 @@
             searchTermsStr = [NSString stringWithFormat:@"%@%s%@", searchTermsStr, " OR ", temp];
         }
     }
+    
+    searchTermsStr = [NSString stringWithFormat:@"%@%s", searchTermsStr, ") filter:safe"];
     
     NSLog(@"%@", searchTermsStr);
     

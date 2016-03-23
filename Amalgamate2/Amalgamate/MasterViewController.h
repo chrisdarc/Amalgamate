@@ -8,7 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+#import "SelectFeedViewController.h"
+#import "SearchTermData.h"
+//#import "ViewController.h"
+
+@protocol MasterViewControllerDelegate <NSObject>
+-(void)didDismissMasterViewController:(UIViewController*)vc;
+@end
+
+@interface MasterViewController : UITableViewController <SelectFeedViewControllerDelegate>
+
+@property SearchTermData * searchTermData;
+
+@property(nonatomic, weak) id<MasterViewControllerDelegate> delegate;
+
+-(void)dismissMasterViewController;
+
+-(void)didDismissSelectFeedViewController:(UIViewController*)vc;
+
 
 @end
 

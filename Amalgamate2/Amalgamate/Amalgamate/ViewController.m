@@ -46,11 +46,26 @@
         self.dataSource = nil;
         
         
+//        SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
+//        UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
+//        
+//        selectFeedViewController.delegate = self;
+//        [self presentViewController: enclosingNav animated: YES completion:nil];
+        
+        
+        ManageViewController * tumblrViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tumblrView"];
+        UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController:tumblrViewController];
+        tumblrViewController.delegate = self;
+        [self presentViewController:enclosingNav animated:NO completion:nil];
+        //[self presentViewController:tumblrViewController animated:YES completion:nil];
+        
+        
         NSLog(@"Displaying Tumblr Feed");
     }
     else
     {
         NSLog(@"Error displaying feed");
+        self.dataSource = nil;
     }
     
     //[self refreshFeed];
@@ -74,24 +89,24 @@
 }
 
 
--(IBAction)currentFeedButtonPressed:(id)sender
-{
-    SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
-    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
-    
-    selectFeedViewController.delegate = self;
-    [self presentViewController: enclosingNav animated: YES completion:nil];
-}
+//-(IBAction)currentFeedButtonPressed:(id)sender
+//{
+//    SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
+//    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
+//    
+//    selectFeedViewController.delegate = self;
+//    [self presentViewController: enclosingNav animated: YES completion:nil];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(void) refreshFeed
-{
-    //[myTableView reload];
-}
+//-(void) refreshFeed
+//{
+//    //[myTableView reload];
+//}
 
 -(IBAction)managePressed:(id)sender
 {
@@ -104,13 +119,21 @@
 -(void)didDismissViewController:(UIViewController*)vc
 {
     NSLog(@"Dismissed !!!!!");
-    [self refreshFeed];
 }
 
 -(void)didDismissSelectFeedViewController:(UIViewController *)vc
 {
     NSLog(@"SelectFeedViewController Dissmissed");
 }
+
+-(void)didDismissMasterViewController:(UIViewController *)vc
+{
+    NSLog(@"MasterViewController (TUMBLR) Dissmissed");
+    //[self viewDidAppear:YES];
+    
+}
+
+
 
 
 //-(UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController*)controller
@@ -165,6 +188,15 @@
          
          // Pass any objects to the view controller here, like...
          //[vc setMyObjectHere:object];
+     }
+     if([[segue identifier] isEqualToString:@"toSelectFeed"])
+     {
+         SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
+         UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
+         
+         selectFeedViewController.delegate = self;
+         [self presentViewController: enclosingNav animated: YES completion:nil];
+//         [self presentModalViewController:otherViewCon animated:YES];
      }
      
  }

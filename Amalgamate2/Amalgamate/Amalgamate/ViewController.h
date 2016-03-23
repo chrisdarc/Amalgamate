@@ -11,14 +11,21 @@
 #import "ManageViewController.h"
 #import "SearchTermData.h"
 #import "SelectFeedViewController.h"
+#import "MasterViewController.h"
 #import <UIKit/UIKit.h>
 #import <TwitterKit/TwitterKit.h>
 
-@interface ViewController : TWTRTimelineViewController <ManageViewControllerDelegate, SelectFeedViewControllerDelegate>
+@protocol ViewControllerDelegate <NSObject>
+-(void)aFeedDismissed:(UIViewController*)vc;
+@end
+
+@interface ViewController : TWTRTimelineViewController <ManageViewControllerDelegate, SelectFeedViewControllerDelegate, MasterViewControllerDelegate>
 {
     IBOutlet UITableView* feed;
     IBOutlet UIButton* currentFeedButton;
 }
+
+@property(nonatomic, weak) id<ViewControllerDelegate> delegate;
 
 @property SearchTermData * searchTermData;
 
@@ -38,6 +45,8 @@
 -(void)didDismissViewController:(UIViewController*)vc;
 
 -(void)didDismissSelectFeedViewController:(UIViewController *)vc;
+
+-(void)didDismissMasterViewController:(UIViewController*)vc;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 

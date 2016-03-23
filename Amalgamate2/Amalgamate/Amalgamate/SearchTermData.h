@@ -21,4 +21,6 @@
 
 -(NSString*)getSearchTermsStringTwitter;
 
+-(NSString*)getSearchTermsStringTumblr;
+
 @end

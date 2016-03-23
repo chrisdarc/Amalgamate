@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize searchTermData;
+@synthesize searchTermData, activeFeed;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,13 +25,62 @@
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
-    [searchTermData getSearchTermsString];
     
-    NSString * twitterSearchQuery = [searchTermData getSearchTermsStringTwitter];
-    TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
-    self.dataSource = [[TWTRSearchTimelineDataSource alloc] initWithSearchQuery:twitterSearchQuery APIClient:client];
+    [self loadActiveFeed];
+    
+    if([activeFeed isEqualToString:@"TWITTER"])
+    {
+        NSLog(@"Displaying Twitter Feed");
+
+        
+        NSString * twitterSearchQuery = [searchTermData getSearchTermsStringTwitter];
+        TWTRTimelineViewController *client = [[TWTRAPIClient alloc] init];
+        self.dataSource = [[TWTRSearchTimelineDataSource alloc] initWithSearchQuery:twitterSearchQuery APIClient:client];
+    }
+    else if ([activeFeed isEqualToString:@"TUMBLR"])
+    {
+        NSString * tumblrSearchQuery = [searchTermData getSearchTermsStringTumblr];
+        
+//        **TUMBLR TABLE VIEW CODE GOES HERE**
+        //set self.dataSource to be your table view.
+        self.dataSource = nil;
+        
+        
+        NSLog(@"Displaying Tumblr Feed");
+    }
+    else
+    {
+        NSLog(@"Error displaying feed");
+    }
     
     //[self refreshFeed];
+}
+
+-(void)loadActiveFeed
+{
+    //Load feed previously saved
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString * storedString= [userDefaults objectForKey:@"activeFeed"];
+    if (storedString == nil)
+    {
+        //initialize the string that holds the active feed
+        activeFeed = @"TWITTER";
+    }
+    else
+    {
+        //make search terms equal to the string that is stored
+        activeFeed = storedString;
+    }
+}
+
+
+-(IBAction)currentFeedButtonPressed:(id)sender
+{
+    SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
+    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
+    
+    selectFeedViewController.delegate = self;
+    [self presentViewController: enclosingNav animated: YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +106,17 @@
     NSLog(@"Dismissed !!!!!");
     [self refreshFeed];
 }
+
+-(void)didDismissSelectFeedViewController:(UIViewController *)vc
+{
+    NSLog(@"SelectFeedViewController Dissmissed");
+}
+
+
+//-(UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController*)controller
+//{
+//    return UIModalPresentationNone;
+//}
 
 //-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 //{
@@ -106,6 +166,7 @@
          // Pass any objects to the view controller here, like...
          //[vc setMyObjectHere:object];
      }
+     
  }
 
 @end

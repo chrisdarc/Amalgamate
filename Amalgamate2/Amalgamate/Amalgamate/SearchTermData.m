@@ -93,4 +93,33 @@
     return searchTermsStr;
 }
 
+-(NSString*)getSearchTermsStringTumblr
+{
+    //place to store the string
+    NSString * searchTermsStr;
+    
+    //load from the file
+    NSArray* searchTermArray = [self loadSearchTerms];
+    NSString * temp;
+    
+    for (int i = 0; i<searchTermArray.count; i++)
+    {
+        if(i == 0)
+        {
+            temp = [NSString stringWithFormat: @"%@", searchTermArray[i]];
+            searchTermsStr = [NSString stringWithFormat:@"%@", temp];
+        }
+        else
+        {
+            temp = [NSString stringWithFormat: @"%@", searchTermArray[i]];
+            searchTermsStr = [NSString stringWithFormat:@"%@%s%@", searchTermsStr, "+", temp];
+        }
+    }
+    
+    NSLog(@"%@", searchTermsStr);
+    
+    //it is possible to return null, need to check for this when calling this method.
+    return searchTermsStr;
+}
+
 @end

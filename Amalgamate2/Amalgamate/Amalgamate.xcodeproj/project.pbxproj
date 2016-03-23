@@ -23,6 +23,8 @@
 		83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DEC1C97281B001DCCF4 /* SearchViewController.m */; };
 		83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DF51C9751D1001DCCF4 /* ManageViewController.m */; };
 		83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83927DF61C9751D1001DCCF4 /* ManageViewController.xib */; };
+		83A077FE1CA210E700AF4797 /* SelectFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */; };
+		83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */; };
 		83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */; };
 		83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,9 @@
 		83927DF41C9751D1001DCCF4 /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
 		83927DF51C9751D1001DCCF4 /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
 		83927DF61C9751D1001DCCF4 /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
+		83A077FB1CA210E700AF4797 /* SelectFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectFeedViewController.h; sourceTree = "<group>"; };
+		83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectFeedViewController.m; sourceTree = "<group>"; };
+		83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFeedViewController.xib; sourceTree = "<group>"; };
 		83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +146,9 @@
 				83927DEB1C97281B001DCCF4 /* SearchViewController.h */,
 				83927DEC1C97281B001DCCF4 /* SearchViewController.m */,
 				83927DC11C972570001DCCF4 /* Main.storyboard */,
+				83A077FB1CA210E700AF4797 /* SelectFeedViewController.h */,
+				83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */,
+				83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */,
 				83927DF41C9751D1001DCCF4 /* ManageViewController.h */,
 				83927DF51C9751D1001DCCF4 /* ManageViewController.m */,
 				83927DF61C9751D1001DCCF4 /* ManageViewController.xib */,
@@ -257,6 +265,7 @@
 				TargetAttributes = {
 					83927DB41C972570001DCCF4 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = GNHFM5EZSQ;
 					};
 					83927DCD1C972571001DCCF4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -297,6 +306,7 @@
 				83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */,
 				83927DC51C972571001DCCF4 /* Assets.xcassets in Resources */,
 				83927DC31C972570001DCCF4 /* Main.storyboard in Resources */,
+				83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */,
 				83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +353,7 @@
 				83927DBD1C972570001DCCF4 /* AppDelegate.m in Sources */,
 				83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */,
 				83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */,
+				83A077FE1CA210E700AF4797 /* SelectFeedViewController.m in Sources */,
 				83927DBA1C972570001DCCF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +495,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -492,6 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C398Group10.Amalgamate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -499,6 +513,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -507,6 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C398Group10.Amalgamate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

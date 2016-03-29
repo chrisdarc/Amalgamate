@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75A73F551CAB2DEF007BA316 /* AmalgamateIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75A73F541CAB2DEF007BA316 /* AmalgamateIcon.jpg */; };
 		83245BEC1C99FFA6000C6EBD /* SearchTermData.m in Sources */ = {isa = PBXBuildFile; fileRef = 83245BEB1C99FFA6000C6EBD /* SearchTermData.m */; };
 		83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F411C99F45900B799A2 /* Fabric.framework */; };
 		83657F461C99F45900B799A2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F421C99F45900B799A2 /* TwitterKit.framework */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75A73F541CAB2DEF007BA316 /* AmalgamateIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AmalgamateIcon.jpg; sourceTree = "<group>"; };
 		83245BEA1C99FFA6000C6EBD /* SearchTermData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTermData.h; sourceTree = "<group>"; };
 		83245BEB1C99FFA6000C6EBD /* SearchTermData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTermData.m; sourceTree = "<group>"; };
 		83657F411C99F45900B799A2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				83927DC91C972571001DCCF4 /* Info.plist */,
 				83245BEA1C99FFA6000C6EBD /* SearchTermData.h */,
 				83245BEB1C99FFA6000C6EBD /* SearchTermData.m */,
+				75A73F541CAB2DEF007BA316 /* AmalgamateIcon.jpg */,
 				83927DB81C972570001DCCF4 /* Supporting Files */,
 			);
 			path = Amalgamate;
@@ -478,6 +481,7 @@
 				83927DC51C972571001DCCF4 /* Assets.xcassets in Resources */,
 				83927DC31C972570001DCCF4 /* Main.storyboard in Resources */,
 				83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */,
+				75A73F551CAB2DEF007BA316 /* AmalgamateIcon.jpg in Resources */,
 				83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

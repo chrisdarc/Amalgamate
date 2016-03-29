@@ -23,7 +23,8 @@
     // Optional: Place the button in the center of your view.
 //    loginButton.center = self.view.center;
 //    [self.view addSubview:loginButton];
-    CGPoint fbPoint = CGPointMake(187.5, 250);
+    CGPoint fbPoint = self.view.center;//CGPointMake(187.5, 250);
+    fbPoint.y = fbPoint.y + 50;
     loginButtonFB.center = fbPoint;
     
     
@@ -54,7 +55,7 @@
     }];
     
     // TODO: Change where the log in button is positioned in your view
-    CGPoint loc=CGPointMake(187.5, 315);
+    CGPoint loc = self.view.center;
     loginButtonTW.center = loc;
     [self.view addSubview:loginButtonTW];
     

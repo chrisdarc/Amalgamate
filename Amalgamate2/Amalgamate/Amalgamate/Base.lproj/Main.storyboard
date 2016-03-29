@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="218" id="5mt-oq-OVY">
-                                <rect key="frame" x="0.0" y="92" width="375" height="218"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="218"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mt-oq-OVY" id="H9f-sQ-WVl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
@@ -94,16 +94,16 @@
         <scene sceneID="G78-5Y-r3r">
             <objects>
                 <tableViewController storyboardIdentifier="tumblrView" id="Bfw-BE-Jqr" customClass="MasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="296" sectionHeaderHeight="28" sectionFooterHeight="28" id="AVm-LG-hnu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="371" sectionHeaderHeight="28" sectionFooterHeight="28" id="AVm-LG-hnu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="296" id="dIm-Pl-9fY">
-                                <rect key="frame" x="0.0" y="92" width="375" height="296"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="371" id="dIm-Pl-9fY">
+                                <rect key="frame" x="0.0" y="92" width="375" height="371"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dIm-Pl-9fY" id="VbR-RF-f8d">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="295"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="370"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -195,8 +195,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="auU-Rv-Sfn"/>
         <segue reference="dv5-DI-Uhb"/>
+        <segue reference="auU-Rv-Sfn"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

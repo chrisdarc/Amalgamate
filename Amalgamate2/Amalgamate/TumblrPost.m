@@ -156,15 +156,20 @@
        tumblrObject.purl=SURLString;
        tumblrObject.photoCaption=[postToAdd objectForKey:kSphotocaptionKey];
        tumblrObject.SpostTime=[ postToAdd objectForKey: kSdateKey ];
-      
-       NSArray* Sphotos =[ postToAdd objectForKey: kSphotoKey ];
-       
        tumblrObject.Susername=[ postToAdd objectForKey: kblognamekey ];
+      
+       if ([ postToAdd objectForKey: kSphotoKey ]!=nil){// check if there is no photo but a video
+           NSArray* Sphotos =[ postToAdd objectForKey: kSphotoKey ];
        NSDictionary *Spho= Sphotos[0];
        NSArray* Sphotoswithsize = [ Spho objectForKey: kSphotosizeKeyArray ];
-       NSDictionary* photo3=Sphotoswithsize[2];//"width": 250,"height": 333
+       NSDictionary* photo3=Sphotoswithsize[1];//"width": 250,"height": 333
        NSString *SphotoURLString=[ photo3 objectForKey: kurlKey ];
        tumblrObject.SphotoURL=[ NSURL URLWithString: SphotoURLString ];
+       }
+       else{
+           tumblrObject.SphotoURL=[ NSURL URLWithString: @"http://ww1.sinaimg.cn/mw690/abc170eajw1f2eju26fj7j207902rdfz.jpg" ];
+
+       }
        
        
 //       NSDictionary* Sphoto = [ Spho objectForKey: koriginalSizelKey ];

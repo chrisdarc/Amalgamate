@@ -30,6 +30,23 @@
     self.navigationItem.rightBarButtonItem = addButton;
     
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
+    [self whatToDisplay];
+}
+
+
+-(void)whatToDisplay
+{
+    [self loadArray];
+    NSLog(@"%s%lu", "Number of items in searchTerms", (unsigned long)searchTerms.count);
+    if(searchTerms.count == 0)
+    {
+        SearchInfoLabel.alpha = 1;
+    }
+    else
+    {
+        SearchInfoLabel.alpha = 0;
+    }
 }
 
 -(void)loadArray
@@ -40,7 +57,7 @@
     if (storedArray == nil)
     {
         //initialize data structure that holds search terms
-        searchTerms = [[NSMutableArray alloc]initWithObjects: @"First", nil];//@"Test Search Term", nil];
+        searchTerms = [[NSMutableArray alloc]init];//initWithObjects: @"First", nil];//@"Test Search Term", nil];
     }
     else
     {
@@ -97,6 +114,7 @@
                                    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
                                    
                                    [self.searchTable insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                                   [self whatToDisplay];
                                }];
     [alert addAction:cancelAction];
     [alert addAction:okAction];
@@ -152,6 +170,8 @@
         
         //remove from table view
         [searchTable deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [self whatToDisplay];
     }
 }
 

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+@interface SearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+{
+    IBOutlet UILabel * SearchInfoLabel;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView* searchTable;
 

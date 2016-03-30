@@ -28,9 +28,18 @@
     
     [self loadActiveFeed];
     
-    if([activeFeed isEqualToString:@"TWITTER"])
+    if([searchTermData getSearchTermsString] == nil)
+    {
+        NSLog(@"string is nil");
+        NSLog(@"%s%@", "String contains: ", [searchTermData getSearchTermsString]);
+        self.dataSource = nil;
+        infoLabel.alpha = 1;
+        
+    }
+    else if([activeFeed isEqualToString:@"TWITTER"])
     {
         NSLog(@"Displaying Twitter Feed");
+        infoLabel.alpha = 0;
 
         
         NSString * twitterSearchQuery = [searchTermData getSearchTermsStringTwitter];
@@ -39,6 +48,8 @@
     }
     else if ([activeFeed isEqualToString:@"TUMBLR"])
     {
+        infoLabel.alpha = 0;
+
         NSString * tumblrSearchQuery = [searchTermData getSearchTermsStringTumblr];
         
 //        **TUMBLR TABLE VIEW CODE GOES HERE**

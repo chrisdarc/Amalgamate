@@ -23,6 +23,7 @@
 {
     IBOutlet UITableView* feed;
     IBOutlet UIButton* currentFeedButton;
+    IBOutlet UILabel* infoLabel;
 }
 
 @property(nonatomic, weak) id<ViewControllerDelegate> delegate;

@@ -182,7 +182,15 @@
 {
    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     TumblrIndividualObject* individualPost = [ self.postFromData objectAtIndex: indexPath.row ];
+    // ---------------------- add none string ----------------------
+    UILabel* ns= [[UILabel alloc] initWithFrame:CGRectMake(0.0, 350.0, 220.0, 0.0)];
     
+    ns.text=@"ffffffffffffffffff!!!!!";
+    ns.font = [UIFont systemFontOfSize:17.0];
+    //    cellPostTime.textAlignment = UITextAlignmentLeft;
+    ns.textColor = [UIColor blueColor];
+    ns.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+    [cell.contentView addSubview:ns];
       // ---------------------- add username ----------------------
     UILabel* cellusername = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)];
     
@@ -268,8 +276,12 @@
    {
       if ( individualPost.SphotoURL != nil )
       {
+          NSString *path = [individualPost.SphotoURL path];//get the extension of the url, in oreder to check if it is a gif
+          NSString * extension = [path pathExtension];
+          NSLog(extension);
+         
+          
          NSURLRequest* myRequest = [ NSURLRequest requestWithURL: individualPost.SphotoURL ];
-
          AFHTTPRequestOperation* myOperation = [ [ AFHTTPRequestOperation alloc ] initWithRequest: myRequest ];
          
          myOperation.userInfo = @{ @"Data" : individualPost };

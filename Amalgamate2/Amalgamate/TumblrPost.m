@@ -162,10 +162,20 @@
            NSArray* Sphotos =[ postToAdd objectForKey: kSphotoKey ];
        NSDictionary *Spho= Sphotos[0];
        NSArray* Sphotoswithsize = [ Spho objectForKey: kSphotosizeKeyArray ];
-       NSDictionary* photo3=Sphotoswithsize[1];//"width": 250,"height": 333
-       NSString *SphotoURLString=[ photo3 objectForKey: kurlKey ];
-       tumblrObject.SphotoURL=[ NSURL URLWithString: SphotoURLString ];
-       }
+           
+           if(Sphotoswithsize.count>=3){                //deal with different sizes of photos
+               NSDictionary* photo3=Sphotoswithsize[2];//"width": 250,"height": 333
+               NSString *SphotoURLString=[ photo3 objectForKey: kurlKey ];
+               tumblrObject.SphotoURL=[ NSURL URLWithString: SphotoURLString ];
+
+           }
+           else{
+               NSDictionary* photo3=Sphotoswithsize[1];
+               NSString *SphotoURLString=[ photo3 objectForKey: kurlKey ];
+               tumblrObject.SphotoURL=[ NSURL URLWithString: SphotoURLString ];
+
+           }
+             }
        else{
            tumblrObject.SphotoURL=[ NSURL URLWithString: @"http://ww1.sinaimg.cn/mw690/abc170eajw1f2eju26fj7j207902rdfz.jpg" ];
 

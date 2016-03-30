@@ -29,6 +29,8 @@
 		83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */; };
 		83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */; };
 		FF55F8211CAB54E1004E534F /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = FF55F8201CAB54E1004E534F /* favicon.ico */; };
+		FF55F8241CAB6B36004E534F /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */; };
+		FF55F8261CAB6E02004E534F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF55F8251CAB6E02004E534F /* ImageIO.framework */; };
 		FFA0908C1CA2315500ADFAC4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090831CA2315500ADFAC4 /* MasterViewController.m */; };
 		FFA0908D1CA2315500ADFAC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090851CA2315500ADFAC4 /* DetailViewController.m */; };
 		FFA0908E1CA2315500ADFAC4 /* TumblrIndividualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */; };
@@ -111,6 +113,9 @@
 		83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		FF55F8201CAB54E1004E534F /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		FF55F8221CAB6B36004E534F /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		FF55F8251CAB6E02004E534F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		FFA090811CA2315500ADFAC4 /* CommonIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonIncludes.h; sourceTree = "<group>"; };
 		FFA090821CA2315500ADFAC4 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		FFA090831CA2315500ADFAC4 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
@@ -177,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF55F8261CAB6E02004E534F /* ImageIO.framework in Frameworks */,
 				83657F481C99F45900B799A2 /* TwitterCore.framework in Frameworks */,
 				83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */,
 				83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */,
@@ -286,6 +292,7 @@
 		83927DFB1C978ACA001DCCF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF55F8251CAB6E02004E534F /* ImageIO.framework */,
 				83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */,
 				83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */,
 			);
@@ -295,6 +302,8 @@
 		FFA090801CA2314800ADFAC4 /* Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				FF55F8221CAB6B36004E534F /* UIImage+animatedGIF.h */,
+				FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */,
 				FF55F8201CAB54E1004E534F /* favicon.ico */,
 				FFA090D41CA233FF00ADFAC4 /* GTMNSString+HTML.h */,
 				FFA090D51CA233FF00ADFAC4 /* GTMNSString+HTML.m */,
@@ -540,6 +549,7 @@
 				FFA090BF1CA2318000ADFAC4 /* SBJsonUTF8Stream.m in Sources */,
 				FFA090CE1CA2318000ADFAC4 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				FFA090C21CA2318000ADFAC4 /* SBJsonStreamParser.m in Sources */,
+				FF55F8241CAB6B36004E534F /* UIImage+animatedGIF.m in Sources */,
 				FFA090CD1CA2318000ADFAC4 /* SBJsonTokeniser.m in Sources */,
 				FFA090D11CA2318000ADFAC4 /* SBJsonStreamParserState.m in Sources */,
 				FFA090D01CA2318000ADFAC4 /* SBJsonStreamWriter.m in Sources */,

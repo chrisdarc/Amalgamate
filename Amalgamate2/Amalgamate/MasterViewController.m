@@ -11,7 +11,7 @@
 #import "TBViewController.h"
 #import "SBJson.h"
 #import "AFNetworking.h"
-
+#import "UIImage+animatedGIF.h"
 #import "TumblrPost.h"
 
 @interface MasterViewController ()
@@ -239,7 +239,7 @@
     cellPostText.textColor = [UIColor blackColor];
     cellPostText.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
     [cell.contentView addSubview:cellPostText];
-    NSLog(@"start!!!!!!!!");
+    
     
     
     
@@ -255,32 +255,41 @@
    }
    
    cellPostText.text = individualPost.photoCaption;
-     NSLog(@"end!!!!!!!!");
     NSLog(individualPost.SpostTime);
     cellPostTime.text = individualPost.SpostTime;// cellPostTime.text = individualPost.postTime;
     cellusername.text=individualPost.Susername;//cellusername.text=individualPost.title;
     //celldes.text=individualPost.Susername;//celldes.text=individualPost.des;
       if ( individualPost.SphotoData != nil )
     {
-        
-    // ---------------------- add post image ----------------------
-    
+        NSString *path = [individualPost.SphotoURL path];//get the extension of the url, in oreder to check if it is a gif
+        NSString * extension = [path pathExtension];
+        NSLog(extension);
+        if ([extension isEqualToString:@"gif"]) {
+             NSLog(@"exhaust!!!!!!!!!!!");
+            UIImage* mygif = [UIImage animatedImageWithAnimatedGIFURL:individualPost.SphotoURL];
+            NSLog(@"aaaaaaaaaaaaaa!!!!!!!!!!!");
+            UIImageView* myImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
+            myImage.tag = 3;
+            myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+            
+            myImage.image=mygif;
+            [cell.contentView addSubview:myImage];
+           
+        }
+        else{
     UIImageView* myImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
     myImage.tag = 3;
     myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
     myImage.image=[ [ UIImage alloc ] initWithData: individualPost.SphotoData ];
     [cell.contentView addSubview:myImage];
+        }
     }
     
    else
    {
       if ( individualPost.SphotoURL != nil )
       {
-          NSString *path = [individualPost.SphotoURL path];//get the extension of the url, in oreder to check if it is a gif
-          NSString * extension = [path pathExtension];
-          NSLog(extension);
-         
-          
+        
          NSURLRequest* myRequest = [ NSURLRequest requestWithURL: individualPost.SphotoURL ];
          AFHTTPRequestOperation* myOperation = [ [ AFHTTPRequestOperation alloc ] initWithRequest: myRequest ];
          

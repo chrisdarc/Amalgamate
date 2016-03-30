@@ -33,6 +33,7 @@
         NSLog(@"string is nil");
         NSLog(@"%s%@", "String contains: ", [searchTermData getSearchTermsString]);
         self.dataSource = nil;
+        feed.scrollEnabled = NO;
         infoLabel.alpha = 1;
         
     }
@@ -40,6 +41,7 @@
     {
         NSLog(@"Displaying Twitter Feed");
         infoLabel.alpha = 0;
+        feed.scrollEnabled = YES;
 
         
         NSString * twitterSearchQuery = [searchTermData getSearchTermsStringTwitter];
@@ -49,6 +51,8 @@
     else if ([activeFeed isEqualToString:@"TUMBLR"])
     {
         infoLabel.alpha = 0;
+        feed.scrollEnabled = YES;
+
 
         NSString * tumblrSearchQuery = [searchTermData getSearchTermsStringTumblr];
         

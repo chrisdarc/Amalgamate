@@ -20,6 +20,10 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="fd1-Ez-U28"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="xcA-Eg-yxN"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cao-ku-AbU">
                         <nil key="title"/>
@@ -47,6 +51,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="currentFeedButton" destination="qP8-9g-7uq" id="rSO-7j-2Jl"/>
+                        <outlet property="feed" destination="xkF-jM-YHs" id="KRb-T9-lo5"/>
                         <outlet property="infoLabel" destination="cZf-EW-rXZ" id="DAE-nJ-EwH"/>
                     </connections>
                 </viewController>
@@ -209,8 +214,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dv5-DI-Uhb"/>
-        <segue reference="auU-Rv-Sfn"/>
+        <segue reference="1CD-Bk-mmk"/>
+        <segue reference="s1Z-iF-cdL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

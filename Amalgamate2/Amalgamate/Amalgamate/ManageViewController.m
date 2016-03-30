@@ -64,7 +64,7 @@
     // TODO: Change where the log in button is positioned in your view
     CGPoint loc = self.view.center;
     loginButtonTW.center = loc;
-    loginButtonTW.contentScaleFactor = 0.2;
+    //loginButtonTW.contentScaleFactor = 0.2;
     //[twitterButtonView addSubview:loginButtonTW];
     [self.view addSubview:loginButtonTW];
     

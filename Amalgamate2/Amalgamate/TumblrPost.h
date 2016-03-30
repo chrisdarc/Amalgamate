@@ -1,9 +1,9 @@
 //
-//  TumblrPost.h
-//  MyTumblrFollowerApp
+//  TBViewController.h
+//  Amalgamate
 //
-//  Created by Chad Jones on 2/29/16.
-//  Copyright (c) 2016 CollegeMobile, Inc. All rights reserved.
+//  Created by Ji Hua on 2016-03-14.
+//  Copyright (c) 2016 Group10. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

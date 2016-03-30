@@ -1,9 +1,9 @@
 //
-//  MasterViewController.m
-//  MyTumblrFollowerApp
+//  TBViewController.h
+//  Amalgamate
 //
-//  Created by Chad Jones on 2/22/16.
-//  Copyright (c) 2016 CollegeMobile, Inc. All rights reserved.
+//  Created by Ji Hua on 2016-03-14.
+//  Copyright (c) 2016 Group10. All rights reserved.
 //
 
 #import "MasterViewController.h"
@@ -330,7 +330,7 @@
         //[self.view addSubview:self.webView];
         
 //        NSString* embedHTML = [NSString stringWithFormat:@"\n<video  id='embed-56fb4a939f802192906454' class='crt-video crt-skin-default' width='250' height='444' poster='https://31.media.tumblr.com/tumblr_o4u1z8NpsX1rzftr5_frame1.jpg' preload='none' data-crt-video data-crt-options='{\"autoheight\":null,\"duration\":9,\"hdUrl\":false,\"filmstrip\":{\"url\":\"https:\\/\\/38.media.tumblr.com\\/previews\\/tumblr_o4u1z8NpsX1rzftr5_filmstrip.jpg\",\"width\":\"200\",\"height\":\"357\"}}' >\n    <source src=\"https://api.tumblr.com/video_file/141936067900/tumblr_o4u1z8NpsX1rzftr5/480\" type=\"video/mp4\">\n</video>\n"];
-        NSLog(individualPost.videourl);
+        //NSLog(individualPost.videourl);
         NSString* embedHTML =individualPost.videourl;
         [webView loadHTMLString:embedHTML baseURL:[[NSBundle mainBundle] resourceURL]];
     

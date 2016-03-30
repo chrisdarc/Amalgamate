@@ -23,4 +23,5 @@
 @property NSURL* SphotoURL;
 @property NSData* SphotoData;
 @property (nonatomic) NSString* SpostTime;
+@property NSString* videourl;
 @end

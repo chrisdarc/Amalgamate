@@ -162,6 +162,7 @@
            NSArray* Sphotos =[ postToAdd objectForKey: kSphotoKey ];
        NSDictionary *Spho= Sphotos[0];
        NSArray* Sphotoswithsize = [ Spho objectForKey: kSphotosizeKeyArray ];
+           tumblrObject.videourl=@"pic";
            
            if(Sphotoswithsize.count>=3){                //deal with different sizes of photos
                NSDictionary* photo3=Sphotoswithsize[2];//"width": 250,"height": 333
@@ -176,9 +177,16 @@
 
            }
              }
-       else{//if there is a video, we use this photos to notice users
+       else if([ postToAdd objectForKey: kSvideoKey ]!=nil){//if there is a video, we use this photos to notice users
            tumblrObject.SphotoURL=[ NSURL URLWithString: @"http://ww1.sinaimg.cn/mw690/abc170eajw1f2eju26fj7j207902rdfz.jpg" ];
+            NSArray* Svidoe =[ postToAdd objectForKey: kSvideoKey ];
+           NSDictionary* myvidoe=Svidoe[0];
+           tumblrObject.videourl=[myvidoe objectForKey:kSeachVideoKey];
+           
 
+       }
+       else{
+       
        }
        
        

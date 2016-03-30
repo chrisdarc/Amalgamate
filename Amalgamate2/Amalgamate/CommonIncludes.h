@@ -23,4 +23,8 @@
 #define kSdateKey @"date"
 #define kSphotocaptionKey @"caption"
 #define kSphotosizeKeyArray @"alt_sizes"
+#define kSvideoKey @"player"
+#define kSeachVideoKey @"embed_code"
+
+
 #endif

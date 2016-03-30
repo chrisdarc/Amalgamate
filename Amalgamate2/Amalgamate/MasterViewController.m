@@ -182,15 +182,7 @@
 {
    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     TumblrIndividualObject* individualPost = [ self.postFromData objectAtIndex: indexPath.row ];
-    // ---------------------- add none string ----------------------
-    UILabel* ns= [[UILabel alloc] initWithFrame:CGRectMake(0.0, 350.0, 220.0, 0.0)];
-    
-    ns.text=@"ffffffffffffffffff!!!!!";
-    ns.font = [UIFont systemFontOfSize:17.0];
-    //    cellPostTime.textAlignment = UITextAlignmentLeft;
-    ns.textColor = [UIColor blueColor];
-    ns.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
-    [cell.contentView addSubview:ns];
+ 
       // ---------------------- add username ----------------------
     UILabel* cellusername = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 15.0)];
     
@@ -204,6 +196,7 @@
     UIImageView* tumblrIcon = [[UIImageView alloc] initWithFrame:CGRectMake(330.0, 0.0, 18.0, 18.0)];
     tumblrIcon.image = [UIImage imageNamed: @"favicon.ico"];
     [cell.contentView addSubview:tumblrIcon];
+    
     // ---------------------- add description ----------------------
     UILabel* celldes = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 17.0, 220.0, 15.0)];
     
@@ -259,6 +252,10 @@
     cellPostTime.text = individualPost.SpostTime;// cellPostTime.text = individualPost.postTime;
     cellusername.text=individualPost.Susername;//cellusername.text=individualPost.title;
     //celldes.text=individualPost.Susername;//celldes.text=individualPost.des;
+    
+    
+    //----------added image--------------
+    if ([individualPost.videourl isEqualToString:@"pic"]) {
       if ( individualPost.SphotoData != nil )
     {
         NSString *path = [individualPost.SphotoURL path];//get the extension of the url, in oreder to check if it is a gif
@@ -322,6 +319,24 @@
          //do nothing
       }
    }
+    
+}   //---------added a video---------------------
+    else{
+        UIWebView* webView;
+        webView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
+        [webView setAllowsInlineMediaPlayback:YES];
+        [webView setMediaPlaybackRequiresUserAction:NO];
+        [cell.contentView addSubview:webView];
+        //[self.view addSubview:self.webView];
+        
+//        NSString* embedHTML = [NSString stringWithFormat:@"\n<video  id='embed-56fb4a939f802192906454' class='crt-video crt-skin-default' width='250' height='444' poster='https://31.media.tumblr.com/tumblr_o4u1z8NpsX1rzftr5_frame1.jpg' preload='none' data-crt-video data-crt-options='{\"autoheight\":null,\"duration\":9,\"hdUrl\":false,\"filmstrip\":{\"url\":\"https:\\/\\/38.media.tumblr.com\\/previews\\/tumblr_o4u1z8NpsX1rzftr5_filmstrip.jpg\",\"width\":\"200\",\"height\":\"357\"}}' >\n    <source src=\"https://api.tumblr.com/video_file/141936067900/tumblr_o4u1z8NpsX1rzftr5/480\" type=\"video/mp4\">\n</video>\n"];
+        NSLog(individualPost.videourl);
+        NSString* embedHTML =individualPost.videourl;
+        [webView loadHTMLString:embedHTML baseURL:[[NSBundle mainBundle] resourceURL]];
+    
+    
+    }
+    
    
    
    return cell;

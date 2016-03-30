@@ -28,6 +28,7 @@
 		83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */; };
 		83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */; };
 		83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */; };
+		FF55F8211CAB54E1004E534F /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = FF55F8201CAB54E1004E534F /* favicon.ico */; };
 		FFA0908C1CA2315500ADFAC4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090831CA2315500ADFAC4 /* MasterViewController.m */; };
 		FFA0908D1CA2315500ADFAC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090851CA2315500ADFAC4 /* DetailViewController.m */; };
 		FFA0908E1CA2315500ADFAC4 /* TumblrIndividualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */; };
@@ -109,6 +110,7 @@
 		83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFeedViewController.xib; sourceTree = "<group>"; };
 		83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FF55F8201CAB54E1004E534F /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		FFA090811CA2315500ADFAC4 /* CommonIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonIncludes.h; sourceTree = "<group>"; };
 		FFA090821CA2315500ADFAC4 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		FFA090831CA2315500ADFAC4 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		FFA090801CA2314800ADFAC4 /* Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				FF55F8201CAB54E1004E534F /* favicon.ico */,
 				FFA090D41CA233FF00ADFAC4 /* GTMNSString+HTML.h */,
 				FFA090D51CA233FF00ADFAC4 /* GTMNSString+HTML.m */,
 				FFA090D61CA233FF00ADFAC4 /* NSString+HTML.h */,
@@ -478,6 +481,7 @@
 			files = (
 				83927DC81C972571001DCCF4 /* LaunchScreen.storyboard in Resources */,
 				83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */,
+				FF55F8211CAB54E1004E534F /* favicon.ico in Resources */,
 				83927DC51C972571001DCCF4 /* Assets.xcassets in Resources */,
 				83927DC31C972570001DCCF4 /* Main.storyboard in Resources */,
 				83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */,

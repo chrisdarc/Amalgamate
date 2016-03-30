@@ -176,7 +176,7 @@
 
            }
              }
-       else{
+       else{//if there is a video, we use this photos to notice users
            tumblrObject.SphotoURL=[ NSURL URLWithString: @"http://ww1.sinaimg.cn/mw690/abc170eajw1f2eju26fj7j207902rdfz.jpg" ];
 
        }

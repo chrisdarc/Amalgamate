@@ -192,6 +192,10 @@
     cellusername.textColor = [UIColor blueColor];
     cellusername.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
     [cell.contentView addSubview:cellusername];
+    // ----------------------- add tumblr icon -----------------
+    UIImageView* tumblrIcon = [[UIImageView alloc] initWithFrame:CGRectMake(330.0, 0.0, 18.0, 18.0)];
+    tumblrIcon.image = [UIImage imageNamed: @"favicon.ico"];
+    [cell.contentView addSubview:tumblrIcon];
     // ---------------------- add description ----------------------
     UILabel* celldes = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 17.0, 220.0, 15.0)];
     

@@ -122,9 +122,10 @@
 -(IBAction)managePressed:(id)sender
 {
     ManageViewController* manageScreen = [[ManageViewController alloc] initWithNibName:@"ManageViewController" bundle: nil];
-//    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: manageScreen];
+    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: manageScreen];
     manageScreen.delegate = self;
-    [self presentViewController: manageScreen animated:YES completion:nil];//]: enclosingNav animated: YES completion:nil];
+    [self presentViewController:enclosingNav animated:YES completion:nil];
+    //[self presentViewController: manageScreen animated:YES completion:nil];
 }
 
 -(void)didDismissViewController:(UIViewController*)vc

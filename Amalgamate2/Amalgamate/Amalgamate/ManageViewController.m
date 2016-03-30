@@ -19,16 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    FBSDKLoginButton *loginButtonFB = [[FBSDKLoginButton alloc] init];
-    // Optional: Place the button in the center of your view.
-//    loginButton.center = self.view.center;
-//    [self.view addSubview:loginButton];
-    CGPoint fbPoint = self.view.center;//CGPointMake(187.5, 250);
-    fbPoint.y = fbPoint.y + 50;
-    loginButtonFB.center = fbPoint;
+    
+    //dont need facebook button anymore
+//    FBSDKLoginButton *loginButtonFB = [[FBSDKLoginButton alloc] init];
+//    // Optional: Place the button in the center of your view.
+////    loginButton.center = self.view.center;
+////    [self.view addSubview:loginButton];
+//    CGPoint fbPoint = self.view.center;//CGPointMake(187.5, 250);
+//    fbPoint.y = fbPoint.y + 50;
+//    loginButtonFB.center = fbPoint;
+//    [self.view addSubview:loginButtonFB];
+    
+    self.navigationItem.title = @"Amalgamate";
+    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector (dismissLoginScreen)];
     
     
-    [self.view addSubview:loginButtonFB];
+    self.navigationItem.rightBarButtonItem = doneButton;
     
     TWTRLogInButton *loginButtonTW = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
         if (session) {
@@ -57,6 +64,8 @@
     // TODO: Change where the log in button is positioned in your view
     CGPoint loc = self.view.center;
     loginButtonTW.center = loc;
+    loginButtonTW.contentScaleFactor = 0.2;
+    //[twitterButtonView addSubview:loginButtonTW];
     [self.view addSubview:loginButtonTW];
     
 //    [loginButtonFBParent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[loginButtonFB(==loginButtonTW)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(loginButtonFB, loginButtonTW)]];
@@ -72,21 +81,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//
+//- (void)  loginButton:  (FBSDKLoginButton *)loginButton
+//didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
+//                error:  (NSError *)error
+//{
+//    NSLog(@"facebook login button successful");
+//}
+//
+//- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
+//{
+//    NSLog(@"facebook logout button successful");
+//}
 
-- (void)  loginButton:  (FBSDKLoginButton *)loginButton
-didCompleteWithResult:  (FBSDKLoginManagerLoginResult *)result
-                error:  (NSError *)error
-{
-    NSLog(@"facebook login button successful");
-}
 
-- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
-{
-    NSLog(@"facebook logout button successful");
-}
-
-
--(IBAction)dismissLoginScreen:(id)sender
+-(void)dismissLoginScreen
 {
     [self.delegate didDismissViewController:self];
     [self dismissViewControllerAnimated:YES completion:nil];

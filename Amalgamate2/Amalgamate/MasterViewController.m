@@ -49,42 +49,54 @@
 {
     [super viewDidAppear:YES];
     
-    //The wrong way
-    //   NSURL* myURL = [ NSURL URLWithString: @"http://nbctv.tumblr.com/api/read/json" ];
-    //
-    ////   NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
-    //
-    //   NSString* stringFromSource = [ NSString stringWithContentsOfURL: myURL encoding: NSUTF8StringEncoding error: nil ];
-    //
-    //   NSLog( @"%@", stringFromSource );
-    NSString* TBusername;
-    TBViewController *obj = [[TBViewController alloc] init];
-    //TBusername=obj.getTBUserName;
-    TBusername= [searchTermData getSearchTermsStringTumblr];
-    NSString* myJSON=[NSString stringWithFormat:@"%@%@%@",@"https://api.tumblr.com/v2/tagged?tag=",TBusername,@"&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4"];
-    NSURL* myURL = [ NSURL URLWithString: myJSON ];
     
-    NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
-    AFHTTPRequestOperation* myOperation = [ [ AFHTTPRequestOperation alloc ] initWithRequest:myRequest ];
-    
-    [ myOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         NSString* stringFromSource = [ [ NSString alloc ] initWithData: responseObject encoding: NSUTF8StringEncoding ];
-         
-         //NSLog( @"%@", stringFromSource );
-         
-         self.postFromData = [ [ TumblrPost alloc ] initWithData: responseObject ];
-         
-         [ self.tableView reloadData ];
-         
-     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         self.postFromData = nil;
-         
-         [ self.tableView reloadData ];
-     }];
-    
-    [ myOperation start ];
+    if([searchTermData getSearchTermsString] == nil)
+    {
+        tumblrTable = nil;
+        instructions.alpha = 1;
+        tumblrTable.scrollEnabled = NO;
+    }
+    else
+    {
+        instructions.alpha = 0;
+        tumblrTable.scrollEnabled = YES;
+        //The wrong way
+        //   NSURL* myURL = [ NSURL URLWithString: @"http://nbctv.tumblr.com/api/read/json" ];
+        //
+        ////   NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
+        //
+        //   NSString* stringFromSource = [ NSString stringWithContentsOfURL: myURL encoding: NSUTF8StringEncoding error: nil ];
+        //
+        //   NSLog( @"%@", stringFromSource );
+        NSString* TBusername;
+        TBViewController *obj = [[TBViewController alloc] init];
+        //TBusername=obj.getTBUserName;
+        TBusername= [searchTermData getSearchTermsStringTumblr];
+        NSString* myJSON=[NSString stringWithFormat:@"%@%@%@",@"https://api.tumblr.com/v2/tagged?tag=",TBusername,@"&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4"];
+        NSURL* myURL = [ NSURL URLWithString: myJSON ];
+        
+        NSURLRequest* myRequest = [ NSURLRequest requestWithURL: myURL ];
+        AFHTTPRequestOperation* myOperation = [ [ AFHTTPRequestOperation alloc ] initWithRequest:myRequest ];
+        
+        [ myOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             NSString* stringFromSource = [ [ NSString alloc ] initWithData: responseObject encoding: NSUTF8StringEncoding ];
+             
+             //NSLog( @"%@", stringFromSource );
+             
+             self.postFromData = [ [ TumblrPost alloc ] initWithData: responseObject ];
+             
+             [ self.tableView reloadData ];
+             
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+         {
+             self.postFromData = nil;
+             
+             [ self.tableView reloadData ];
+         }];
+        
+        [ myOperation start ];
+    }
     
 }
 

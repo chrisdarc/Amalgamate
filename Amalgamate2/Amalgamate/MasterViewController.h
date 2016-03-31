@@ -18,6 +18,10 @@
 @end
 
 @interface MasterViewController : UITableViewController <SelectFeedViewControllerDelegate, ManageViewControllerDelegate>
+{
+    IBOutlet UITableView * tumblrTable;
+    IBOutlet UILabel * instructions;
+}
 
 @property SearchTermData * searchTermData;
 

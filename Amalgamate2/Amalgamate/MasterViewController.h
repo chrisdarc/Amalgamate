@@ -23,6 +23,7 @@
     IBOutlet UILabel * instructions;
 }
 
+
 @property SearchTermData * searchTermData;
 
 @property(nonatomic, weak) id<MasterViewControllerDelegate> delegate;

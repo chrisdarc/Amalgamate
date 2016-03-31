@@ -167,6 +167,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="instructions" destination="1Wm-99-wJp" id="Eyh-RF-VDU"/>
+                        <outlet property="tumblrTable" destination="AVm-LG-hnu" id="JhN-Bg-dvs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hJ-Vn-qay" userLabel="First Responder" sceneMemberID="firstResponder"/>

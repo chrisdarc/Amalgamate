@@ -53,6 +53,8 @@
     if([searchTermData getSearchTermsString] == nil)
     {
         tumblrTable = nil;
+        [self.tableView reloadData];
+        //self.dataSource = nil;
         instructions.alpha = 1;
         tumblrTable.scrollEnabled = NO;
     }
@@ -189,7 +191,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-   return self.postFromData.numberOfPosts;
+    if([searchTermData getSearchTermsString] == nil)
+    {
+        //[self.tableView reloadData];
+
+        return 0;
+    }
+    else
+    {
+        return self.postFromData.numberOfPosts;
+    }
 }
 
 

@@ -285,27 +285,31 @@
     if ([individualPost.videourl isEqualToString:@"pic"]) {
       if ( individualPost.SphotoData != nil )
     {
+        
         NSString *path = [individualPost.SphotoURL path];//get the extension of the url, in oreder to check if it is a gif
         NSString * extension = [path pathExtension];
         NSLog(extension);
         if ([extension isEqualToString:@"gif"]) {
-             NSLog(@"exhaust!!!!!!!!!!!");
             UIImage* mygif = [UIImage animatedImageWithAnimatedGIFURL:individualPost.SphotoURL];
-            NSLog(@"aaaaaaaaaaaaaa!!!!!!!!!!!");
             UIImageView* myImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
             myImage.tag = 3;
             myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
-            
-            myImage.image=mygif;
+            [[cell.contentView viewWithTag:3]removeFromSuperview] ;
             [cell.contentView addSubview:myImage];
+            //myImage=(UIImageView *)[cell.contentView viewWithTag:3];
+            myImage.contentMode = UIViewContentModeScaleAspectFit;// aspect fit
+            myImage.image=mygif;
            
         }
         else{
-    UIImageView* myImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
-    myImage.tag = 3;
-    myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
-    myImage.image=[ [ UIImage alloc ] initWithData: individualPost.SphotoData ];
-    [cell.contentView addSubview:myImage];
+            UIImageView* myImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
+            myImage.tag = 3;
+            myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+            [[cell.contentView viewWithTag:3]removeFromSuperview] ;
+            [cell.contentView addSubview:myImage];
+            //myImage=(UIImageView *)[cell.contentView viewWithTag:3];
+            myImage.contentMode = UIViewContentModeScaleAspectFit;// aspect fit
+            myImage.image=[ [ UIImage alloc ] initWithData: individualPost.SphotoData ];
         }
     }
     
@@ -350,9 +354,11 @@
 }   //---------added a video---------------------
     else{
         UIWebView* webView;
+        webView.tag=3;
         webView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
         [webView setAllowsInlineMediaPlayback:YES];
         [webView setMediaPlaybackRequiresUserAction:NO];
+        [[cell.contentView viewWithTag:3]removeFromSuperview] ;
         [cell.contentView addSubview:webView];
         //[self.view addSubview:self.webView];
         

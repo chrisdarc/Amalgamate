@@ -295,6 +295,7 @@
             myImage.tag = 3;
             myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
             [[cell.contentView viewWithTag:3]removeFromSuperview] ;
+            [[cell.contentView viewWithTag:6]removeFromSuperview] ;
             [cell.contentView addSubview:myImage];
             //myImage=(UIImageView *)[cell.contentView viewWithTag:3];
             myImage.contentMode = UIViewContentModeScaleAspectFit;// aspect fit
@@ -306,6 +307,7 @@
             myImage.tag = 3;
             myImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
             [[cell.contentView viewWithTag:3]removeFromSuperview] ;
+            [[cell.contentView viewWithTag:6]removeFromSuperview] ;
             [cell.contentView addSubview:myImage];
             //myImage=(UIImageView *)[cell.contentView viewWithTag:3];
             myImage.contentMode = UIViewContentModeScaleAspectFit;// aspect fit
@@ -353,12 +355,12 @@
     
 }   //---------added a video---------------------
     else{
+        [[cell.contentView viewWithTag:6]removeFromSuperview] ;
         UIWebView* webView;
-        webView.tag=3;
         webView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 99.0, 350.0, 280.0)];
         [webView setAllowsInlineMediaPlayback:YES];
         [webView setMediaPlaybackRequiresUserAction:NO];
-        [[cell.contentView viewWithTag:3]removeFromSuperview] ;
+        webView.tag=6;
         [cell.contentView addSubview:webView];
         //[self.view addSubview:self.webView];
         

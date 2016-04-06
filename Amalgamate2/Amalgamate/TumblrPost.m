@@ -155,6 +155,21 @@
                NSString* SURLString = [ postToAdd objectForKey: kSPhotoURLKey ];
        tumblrObject.purl=SURLString;
        tumblrObject.photoCaption=[postToAdd objectForKey:kSphotocaptionKey];
+       
+       
+       
+       if ([ postToAdd objectForKey: @"body" ]!=nil) {
+           tumblrObject.sbody=[postToAdd objectForKey:@"body"];
+       }
+       else{
+           tumblrObject.sbody=@"none";
+       }
+       
+       
+       
+       
+       
+       
        tumblrObject.SpostTime=[ postToAdd objectForKey: kSdateKey ];
        tumblrObject.Susername=[ postToAdd objectForKey: kblognamekey ];
       

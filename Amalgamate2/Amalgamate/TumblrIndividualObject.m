@@ -12,7 +12,10 @@
 @implementation TumblrIndividualObject
 
 
-
+-(void)setSbody:(NSString *)sbody
+{
+    _sbody = [ sbody stringByConvertingHTMLToPlainText ];
+}
 
 -(void)setPhotoCaption:(NSString *)photoCaption
 {

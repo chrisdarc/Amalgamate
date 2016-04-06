@@ -356,6 +356,17 @@
     // ------------- add content for each component ----------------
     cellusername.text = individualPost.Susername;
     cellPostTime.text = individualPost.SpostTime;
+    
+    if (![individualPost.sbody isEqualToString:@"none"]) {
+        [[cell.contentView viewWithTag:3]removeFromSuperview];
+        [[cell.contentView viewWithTag:6]removeFromSuperview];
+        cellPostText.text =individualPost.sbody;
+        cellHeight=150;
+    }
+    else{
+    
+    
+    
     cellPostText.text = individualPost.photoCaption;
     
     // ------------- calculate the height without image/gif/vedio -------------
@@ -483,7 +494,7 @@
     cell.frame = cellFrame;
     
     cellHeight = cellFrame.size.height;
-    
+    }
     return cell;
 }
 

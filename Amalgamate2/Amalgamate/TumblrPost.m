@@ -178,10 +178,22 @@
            }
              }
        else if([ postToAdd objectForKey: kSvideoKey ]!=nil){//if there is a video, we use this photos to notice users
+           
+           
+           
            tumblrObject.SphotoURL=[ NSURL URLWithString: @"http://ww1.sinaimg.cn/mw690/abc170eajw1f2eju26fj7j207902rdfz.jpg" ];
-            NSArray* Svidoe =[ postToAdd objectForKey: kSvideoKey ];
-           NSDictionary* myvidoe=Svidoe[0];
-           tumblrObject.videourl=[myvidoe objectForKey:kSeachVideoKey];
+           NSArray* Svidoe =[ postToAdd objectForKey: kSvideoKey ];
+           NSLog(@"yyyyyyyydyfydfydyfdf");
+           if ([ Svidoe isKindOfClass: [ NSArray class ] ]) {
+               NSDictionary* myvidoe=Svidoe[0];
+               NSLog(@"yyyyyyyydyfydfydyfdf");
+               tumblrObject.videourl=[myvidoe objectForKey:kSeachVideoKey];
+           }
+           else{
+               
+               tumblrObject.videourl=[ postToAdd objectForKey: kSvideoKey ];
+               
+           }
            
 
        }

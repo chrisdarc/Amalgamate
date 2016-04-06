@@ -31,6 +31,8 @@
     
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+    
     [self whatToDisplay];
 }
 

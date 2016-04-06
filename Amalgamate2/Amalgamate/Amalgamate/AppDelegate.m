@@ -25,6 +25,7 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(150/255.0) green:(222/255.0) blue:(151/255.0) alpha:1]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
 
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];

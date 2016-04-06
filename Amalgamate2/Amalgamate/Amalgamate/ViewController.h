@@ -41,7 +41,7 @@
 
 -(void) refreshFeed;
 
--(IBAction)managePressed:(id)sender;
+//-(IBAction)managePressed:(id)sender;
 
 -(void)didDismissViewController:(UIViewController*)vc;
 

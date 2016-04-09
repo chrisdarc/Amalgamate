@@ -11,7 +11,6 @@
 #import "SelectFeedViewController.h"
 #import "SearchTermData.h"
 #import "ManageViewController.h"
-//#import "ViewController.h"
 
 @protocol MasterViewControllerDelegate <NSObject>
 -(void)didDismissMasterViewController:(UIViewController*)vc;
@@ -28,7 +27,6 @@
 
 @property(nonatomic, weak) id<MasterViewControllerDelegate> delegate;
 
--(IBAction)managePressed:(id)sender;
 
 -(void)didDismissViewController:(UIViewController*)vc;
 

@@ -34,7 +34,7 @@
 
 
 
--(void)setpurl:(NSString *)ur;//delete!
+-(void)setpurl:(NSString *)ur;
 {
     _purl = [ ur stringByConvertingHTMLToPlainText ];
 }

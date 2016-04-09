@@ -16,7 +16,6 @@
     NSString* Sdate;
 }
 
-+(BOOL)dataIsValid:(NSData*)dataReceived;
 
 -(instancetype)initWithData:(NSData*)dataReceived;
 

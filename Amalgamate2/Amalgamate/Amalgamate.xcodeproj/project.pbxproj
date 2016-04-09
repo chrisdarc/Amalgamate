@@ -35,7 +35,6 @@
 		FFA0908D1CA2315500ADFAC4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090851CA2315500ADFAC4 /* DetailViewController.m */; };
 		FFA0908E1CA2315500ADFAC4 /* TumblrIndividualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */; };
 		FFA0908F1CA2315500ADFAC4 /* TumblrPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090891CA2315500ADFAC4 /* TumblrPost.m */; };
-		FFA090901CA2315500ADFAC4 /* TBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA0908B1CA2315500ADFAC4 /* TBViewController.m */; };
 		FFA090BF1CA2318000ADFAC4 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090941CA2318000ADFAC4 /* SBJsonUTF8Stream.m */; };
 		FFA090C01CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090951CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m */; };
 		FFA090C11CA2318000ADFAC4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA090961CA2318000ADFAC4 /* SBJsonWriter.m */; };
@@ -125,8 +124,6 @@
 		FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrIndividualObject.m; sourceTree = "<group>"; };
 		FFA090881CA2315500ADFAC4 /* TumblrPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrPost.h; sourceTree = "<group>"; };
 		FFA090891CA2315500ADFAC4 /* TumblrPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrPost.m; sourceTree = "<group>"; };
-		FFA0908A1CA2315500ADFAC4 /* TBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBViewController.h; sourceTree = "<group>"; };
-		FFA0908B1CA2315500ADFAC4 /* TBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBViewController.m; sourceTree = "<group>"; };
 		FFA090921CA2318000ADFAC4 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
 		FFA090931CA2318000ADFAC4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		FFA090941CA2318000ADFAC4 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
@@ -318,8 +315,6 @@
 				FFA090871CA2315500ADFAC4 /* TumblrIndividualObject.m */,
 				FFA090881CA2315500ADFAC4 /* TumblrPost.h */,
 				FFA090891CA2315500ADFAC4 /* TumblrPost.m */,
-				FFA0908A1CA2315500ADFAC4 /* TBViewController.h */,
-				FFA0908B1CA2315500ADFAC4 /* TBViewController.m */,
 			);
 			name = Tumblr;
 			sourceTree = "<group>";
@@ -556,7 +551,6 @@
 				FFA090D31CA2318000ADFAC4 /* SBJsonStreamWriterState.m in Sources */,
 				FFA090D91CA233FF00ADFAC4 /* NSString+HTML.m in Sources */,
 				FFA0908F1CA2315500ADFAC4 /* TumblrPost.m in Sources */,
-				FFA090901CA2315500ADFAC4 /* TBViewController.m in Sources */,
 				FFA090CB1CA2318000ADFAC4 /* AFHTTPSessionManager.m in Sources */,
 				FFA090CA1CA2318000ADFAC4 /* AFHTTPRequestOperation.m in Sources */,
 				FFA090C41CA2318000ADFAC4 /* AFNetworkReachabilityManager.m in Sources */,

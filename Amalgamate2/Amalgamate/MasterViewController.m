@@ -320,15 +320,14 @@
                 [cell.contentView addSubview:myImage];
                 myImage.contentMode = UIViewContentModeScaleAspectFit;// aspect fit
                 
-                if ([extension isEqualToString:@"gif"])
+                if ([extension isEqualToString:@"gif"])//if it is a gif
                 {
-                    image = [UIImage animatedImageWithAnimatedGIFURL:individualPost.SphotoURL];
                     
-                    
+                    image=[UIImage animatedImageWithAnimatedGIFData:individualPost.SphotoData];// apply a third-party lib to deal with the gifs
                 }
                 else {
                     
-                    image = [[UIImage alloc] initWithData:individualPost.SphotoData ];
+                    image = [[UIImage alloc] initWithData:individualPost.SphotoData ];// static picture
                     
                 }
                 myImage.image=image;

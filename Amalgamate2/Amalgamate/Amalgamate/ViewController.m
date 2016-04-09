@@ -62,14 +62,7 @@
         self.dataSource = nil;
         
         
-//        SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
-//        UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
-//        
-//        selectFeedViewController.delegate = self;
-//        [self presentViewController: enclosingNav animated: YES completion:nil];
-        
-        
-        ManageViewController * tumblrViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tumblrView"];
+        MasterViewController * tumblrViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tumblrView"];
         UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController:tumblrViewController];
         tumblrViewController.delegate = self;
         [self presentViewController:enclosingNav animated:NO completion:nil];
@@ -84,7 +77,6 @@
         self.dataSource = nil;
     }
     
-    //[self refreshFeed];
 }
 
 -(void)loadActiveFeed
@@ -105,33 +97,10 @@
 }
 
 
-//-(IBAction)currentFeedButtonPressed:(id)sender
-//{
-//    SelectFeedViewController* selectFeedViewController = [[SelectFeedViewController alloc] initWithNibName:@"SelectFeedViewController" bundle: nil];
-//    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: selectFeedViewController];
-//    
-//    selectFeedViewController.delegate = self;
-//    [self presentViewController: enclosingNav animated: YES completion:nil];
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//-(void) refreshFeed
-//{
-//    //[myTableView reload];
-//}
-
-//-(IBAction)managePressed:(id)sender
-//{
-//    ManageViewController* manageScreen = [[ManageViewController alloc] initWithNibName:@"ManageViewController" bundle: nil];
-//    UINavigationController* enclosingNav = [[UINavigationController alloc] initWithRootViewController: manageScreen];
-//    manageScreen.delegate = self;
-//    [self presentViewController:enclosingNav animated:YES completion:nil];
-//    //[self presentViewController: manageScreen animated:YES completion:nil];
-//}
 
 -(void)didDismissViewController:(UIViewController*)vc
 {
@@ -149,47 +118,6 @@
     //[self viewDidAppear:YES];
     
 }
-
-
-
-
-//-(UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController*)controller
-//{
-//    return UIModalPresentationNone;
-//}
-
-//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    //number of sections to display social media
-//    return (1);
-//}
-//
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    //number of posts currently available to display?
-//    return (25);
-//}
-//
-//-(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UITableViewCell* cellToReturn = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-//    
-//    if(cellToReturn == nil)
-//    {
-//        cellToReturn = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"Cell"];
-//    }
-//    
-//    //Call a get content function and put content here.
-//    cellToReturn.textLabel.text = [NSString stringWithFormat:@"%ld %s", (long)indexPath.row, "Social Media Content"];
-//    
-//    return (cellToReturn);
-//}
-//
-////function to get content from facebook?
-//-(void) getContent
-//{
-//    return;
-//}
 
 
  #pragma mark - Navigation

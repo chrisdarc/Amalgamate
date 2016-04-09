@@ -22,9 +22,6 @@
     //load search terms previously saved
     [self loadArray];
     
-    //edit button, but don't need
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
     //add button
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -92,7 +89,7 @@
 //    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Enter a Search Term" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
 //    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
 //    [alert show];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a SearchTerm" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a Search Term" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){NSLog(@"Cancel Action");}];
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField)
@@ -176,30 +173,6 @@
         [self whatToDisplay];
     }
 }
-
-//#pragma mark - UIAlertViewDelegate methods
-//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    //ok button
-//    if(buttonIndex == 1)
-//    {
-//        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
-//        
-//        if(!searchTerms)
-//        {
-//            searchTerms = [[NSMutableArray alloc]init];
-//        }
-//        [searchTerms insertObject:tempTextField atIndex:0];
-//        
-//        //save here
-//        [self saveArray];
-//        
-//        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//        
-//        [self.searchTable insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//    }
-//    
-//}
 
 
 /*

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchViewController.h"
-#import "ManageViewController.h"
 #import "SearchTermData.h"
 #import "SelectFeedViewController.h"
 #import "MasterViewController.h"
@@ -19,7 +18,7 @@
 -(void)aFeedDismissed:(UIViewController*)vc;
 @end
 
-@interface ViewController : TWTRTimelineViewController <ManageViewControllerDelegate, SelectFeedViewControllerDelegate, MasterViewControllerDelegate>
+@interface ViewController : TWTRTimelineViewController <SelectFeedViewControllerDelegate, MasterViewControllerDelegate>
 {
     IBOutlet UITableView* feed;
     IBOutlet UIButton* currentFeedButton;
@@ -41,7 +40,6 @@
 
 -(void) refreshFeed;
 
-//-(IBAction)managePressed:(id)sender;
 
 -(void)didDismissViewController:(UIViewController*)vc;
 
@@ -51,11 +49,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
-//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
-//
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-//
-//-(void) getContent;
 
 @end
 

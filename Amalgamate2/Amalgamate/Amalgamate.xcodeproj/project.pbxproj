@@ -22,12 +22,8 @@
 		83927DD31C972571001DCCF4 /* AmalgamateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DD21C972571001DCCF4 /* AmalgamateTests.m */; };
 		83927DDE1C972571001DCCF4 /* AmalgamateUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DDD1C972571001DCCF4 /* AmalgamateUITests.m */; };
 		83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DEC1C97281B001DCCF4 /* SearchViewController.m */; };
-		83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DF51C9751D1001DCCF4 /* ManageViewController.m */; };
-		83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83927DF61C9751D1001DCCF4 /* ManageViewController.xib */; };
 		83A077FE1CA210E700AF4797 /* SelectFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */; };
 		83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */; };
-		83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */; };
-		83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */; };
 		FF55F8211CAB54E1004E534F /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = FF55F8201CAB54E1004E534F /* favicon.ico */; };
 		FF55F8241CAB6B36004E534F /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */; };
 		FF55F8261CAB6E02004E534F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF55F8251CAB6E02004E534F /* ImageIO.framework */; };
@@ -103,14 +99,9 @@
 		83927DDF1C972571001DCCF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83927DEB1C97281B001DCCF4 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		83927DEC1C97281B001DCCF4 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		83927DF41C9751D1001DCCF4 /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
-		83927DF51C9751D1001DCCF4 /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
-		83927DF61C9751D1001DCCF4 /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
 		83A077FB1CA210E700AF4797 /* SelectFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectFeedViewController.h; sourceTree = "<group>"; };
 		83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectFeedViewController.m; sourceTree = "<group>"; };
 		83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFeedViewController.xib; sourceTree = "<group>"; };
-		83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		FF55F8201CAB54E1004E534F /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		FF55F8221CAB6B36004E534F /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
@@ -181,8 +172,6 @@
 			files = (
 				FF55F8261CAB6E02004E534F /* ImageIO.framework in Frameworks */,
 				83657F481C99F45900B799A2 /* TwitterCore.framework in Frameworks */,
-				83A131361C98CDAF005EA7CA /* FBSDKLoginKit.framework in Frameworks */,
-				83A131351C98CDAF005EA7CA /* FBSDKCoreKit.framework in Frameworks */,
 				83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */,
 				83657F461C99F45900B799A2 /* TwitterKit.framework in Frameworks */,
 			);
@@ -246,9 +235,6 @@
 				83A077FB1CA210E700AF4797 /* SelectFeedViewController.h */,
 				83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */,
 				83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */,
-				83927DF41C9751D1001DCCF4 /* ManageViewController.h */,
-				83927DF51C9751D1001DCCF4 /* ManageViewController.m */,
-				83927DF61C9751D1001DCCF4 /* ManageViewController.xib */,
 				83927DC41C972571001DCCF4 /* Assets.xcassets */,
 				83927DC61C972571001DCCF4 /* LaunchScreen.storyboard */,
 				83927DC91C972571001DCCF4 /* Info.plist */,
@@ -290,8 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				FF55F8251CAB6E02004E534F /* ImageIO.framework */,
-				83A131331C98CDAF005EA7CA /* FBSDKCoreKit.framework */,
-				83A131341C98CDAF005EA7CA /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -484,7 +468,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83927DC81C972571001DCCF4 /* LaunchScreen.storyboard in Resources */,
-				83927DF81C9751D1001DCCF4 /* ManageViewController.xib in Resources */,
 				FF55F8211CAB54E1004E534F /* favicon.ico in Resources */,
 				83927DC51C972571001DCCF4 /* Assets.xcassets in Resources */,
 				83927DC31C972570001DCCF4 /* Main.storyboard in Resources */,
@@ -560,7 +543,6 @@
 				FFA090C61CA2318000ADFAC4 /* AFURLResponseSerialization.m in Sources */,
 				FFA090C81CA2318000ADFAC4 /* AFHTTPRequestOperationManager.m in Sources */,
 				FFA0908C1CA2315500ADFAC4 /* MasterViewController.m in Sources */,
-				83927DF71C9751D1001DCCF4 /* ManageViewController.m in Sources */,
 				FFA090CF1CA2318000ADFAC4 /* NSObject+SBJson.m in Sources */,
 				83A077FE1CA210E700AF4797 /* SelectFeedViewController.m in Sources */,
 				FFA090C01CA2318000ADFAC4 /* SBJsonStreamParserAccumulator.m in Sources */,

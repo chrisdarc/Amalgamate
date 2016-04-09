@@ -10,13 +10,12 @@
 
 #import "SelectFeedViewController.h"
 #import "SearchTermData.h"
-#import "ManageViewController.h"
 
 @protocol MasterViewControllerDelegate <NSObject>
 -(void)didDismissMasterViewController:(UIViewController*)vc;
 @end
 
-@interface MasterViewController : UITableViewController <SelectFeedViewControllerDelegate, ManageViewControllerDelegate>
+@interface MasterViewController : UITableViewController <SelectFeedViewControllerDelegate>
 {
     IBOutlet UITableView * tumblrTable;
     IBOutlet UILabel * instructions;

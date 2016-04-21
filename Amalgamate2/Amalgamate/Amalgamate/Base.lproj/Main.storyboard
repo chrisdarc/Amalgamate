@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rxl-XP-hmE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rxl-XP-hmE">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +18,7 @@
                             <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <connections>
@@ -29,7 +30,7 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="BZQ-6t-sbj"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qP8-9g-7uq">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <rect key="frame" x="83" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <state key="normal" title="Amalgamate ▾"/>
@@ -37,11 +38,23 @@
                                 <segue destination="Rxl-XP-hmE" kind="modal" identifier="toSelectFeed" id="1CD-Bk-mmk"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="d25-Nr-kqu">
-                            <connections>
-                                <segue destination="u9j-Bq-nOw" kind="push" identifier="toSearch" id="s1Z-iF-cdL"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="search" id="d25-Nr-kqu">
+                                <connections>
+                                    <segue destination="u9j-Bq-nOw" kind="push" identifier="toSearch" id="s1Z-iF-cdL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="zDO-LW-us9">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gPi-F0-l5S">
+                                    <rect key="frame" x="239" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="report"/>
+                                    <connections>
+                                        <action selector="contactUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQf-06-6zW"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -73,7 +86,7 @@
                                     <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <connections>
@@ -113,7 +126,7 @@
                             <rect key="frame" x="0.0" y="544" width="375" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
@@ -139,7 +152,7 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="nmh-Lq-UcP"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SvJ-Dn-Xn5">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <rect key="frame" x="83" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <state key="normal" title="Amalgamate ▾"/>
@@ -147,11 +160,23 @@
                                 <segue destination="Rxl-XP-hmE" kind="modal" identifier="toHome" id="dv5-DI-Uhb"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QYv-j2-gSc">
-                            <connections>
-                                <segue destination="u9j-Bq-nOw" kind="push" identifier="toSearchFromTumblr" id="auU-Rv-Sfn"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="search" id="QYv-j2-gSc">
+                                <connections>
+                                    <segue destination="u9j-Bq-nOw" kind="push" identifier="toSearchFromTumblr" id="auU-Rv-Sfn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="GLi-0P-pUs">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pwn-7t-zOn">
+                                    <rect key="frame" x="239" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="report"/>
+                                    <connections>
+                                        <action selector="contactUs:" destination="Bfw-BE-Jqr" eventType="touchUpInside" id="h37-pf-6XB"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -215,8 +240,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="auU-Rv-Sfn"/>
         <segue reference="dv5-DI-Uhb"/>
+        <segue reference="auU-Rv-Sfn"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

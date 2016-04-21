@@ -24,6 +24,7 @@
 		83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83927DEC1C97281B001DCCF4 /* SearchViewController.m */; };
 		83A077FE1CA210E700AF4797 /* SelectFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */; };
 		83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */; };
+		FF24CE601CC85AE000C20A34 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF24CE5F1CC85AE000C20A34 /* MessageUI.framework */; };
 		FF55F8211CAB54E1004E534F /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = FF55F8201CAB54E1004E534F /* favicon.ico */; };
 		FF55F8241CAB6B36004E534F /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */; };
 		FF55F8261CAB6E02004E534F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF55F8251CAB6E02004E534F /* ImageIO.framework */; };
@@ -102,6 +103,7 @@
 		83A077FB1CA210E700AF4797 /* SelectFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectFeedViewController.h; sourceTree = "<group>"; };
 		83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectFeedViewController.m; sourceTree = "<group>"; };
 		83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFeedViewController.xib; sourceTree = "<group>"; };
+		FF24CE5F1CC85AE000C20A34 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FF55F8201CAB54E1004E534F /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		FF55F8221CAB6B36004E534F /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		FF55F8231CAB6B36004E534F /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF24CE601CC85AE000C20A34 /* MessageUI.framework in Frameworks */,
 				FF55F8261CAB6E02004E534F /* ImageIO.framework in Frameworks */,
 				83657F481C99F45900B799A2 /* TwitterCore.framework in Frameworks */,
 				83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */,
@@ -275,6 +278,7 @@
 		83927DFB1C978ACA001DCCF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF24CE5F1CC85AE000C20A34 /* MessageUI.framework */,
 				FF55F8251CAB6E02004E534F /* ImageIO.framework */,
 			);
 			name = Frameworks;

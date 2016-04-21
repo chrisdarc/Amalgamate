@@ -10,17 +10,18 @@
 
 #import "SelectFeedViewController.h"
 #import "SearchTermData.h"
+#import <MessageUI/MessageUI.h>
 
 @protocol MasterViewControllerDelegate <NSObject>
 -(void)didDismissMasterViewController:(UIViewController*)vc;
 @end
 
-@interface MasterViewController : UITableViewController <SelectFeedViewControllerDelegate>
+@interface MasterViewController : UITableViewController <SelectFeedViewControllerDelegate,MFMailComposeViewControllerDelegate>
 {
     IBOutlet UITableView * tumblrTable;
     IBOutlet UILabel * instructions;
 }
-
+-(IBAction)contactUs:(id)sender;
 
 @property SearchTermData * searchTermData;
 

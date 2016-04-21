@@ -1,6 +1,0 @@
-framework module Pods_Amalgamate {
-  umbrella header "Pods-Amalgamate-umbrella.h"
-
-  export *
-  module * { export * }
-}

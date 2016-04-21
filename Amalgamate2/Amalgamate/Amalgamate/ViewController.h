@@ -13,12 +13,13 @@
 #import "MasterViewController.h"
 #import <UIKit/UIKit.h>
 #import <TwitterKit/TwitterKit.h>
+#import <MessageUI/MessageUI.h>
 
 @protocol ViewControllerDelegate <NSObject>
 -(void)aFeedDismissed:(UIViewController*)vc;
 @end
 
-@interface ViewController : TWTRTimelineViewController <SelectFeedViewControllerDelegate, MasterViewControllerDelegate>
+@interface ViewController : TWTRTimelineViewController <SelectFeedViewControllerDelegate, MasterViewControllerDelegate,MFMailComposeViewControllerDelegate>
 {
     IBOutlet UITableView* feed;
     IBOutlet UIButton* currentFeedButton;
@@ -37,7 +38,7 @@
 -(void)loadActiveFeed;
 
 -(IBAction)currentFeedButtonPressed:(id)sender;
-
+-(IBAction)contactUs:(id)sender;
 -(void) refreshFeed;
 
 

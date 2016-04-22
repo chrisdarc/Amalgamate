@@ -22,7 +22,7 @@
     // Email Content
     NSString *messageBody = @"I want to report this issue";
     // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"huajisas@gmail.com"];
+    NSArray *toRecipents = [NSArray arrayWithObject:@"amalgamateapp@gmail.com"];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
@@ -61,11 +61,35 @@
 
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     searchTermData = [SearchTermData new];
     
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"iFLaunchedOnce"])
+    {
+        NSLog(@"it is the first time");
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"iFLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"agreedToTerms"];
+
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"agreedToTerms"])
+    {
+        TermsAndConditionsViewController * termsView = [[TermsAndConditionsViewController alloc]initWithNibName:@"TermsAndConditionsViewController" bundle: nil];
+        
+        //delegate
+        termsView.delegate = self;
+        
+        [self presentViewController:termsView animated:NO completion:nil];
+    }
+}
+
+-(void)termsAndConditionsAgreed:(UIViewController*)vc
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"agreedToTerms"];
 }
 
 

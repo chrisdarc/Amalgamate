@@ -14,12 +14,13 @@
 #import <UIKit/UIKit.h>
 #import <TwitterKit/TwitterKit.h>
 #import <MessageUI/MessageUI.h>
+#import "TermsAndConditionsViewController.h"
 
 @protocol ViewControllerDelegate <NSObject>
 -(void)aFeedDismissed:(UIViewController*)vc;
 @end
 
-@interface ViewController : TWTRTimelineViewController <SelectFeedViewControllerDelegate, MasterViewControllerDelegate,MFMailComposeViewControllerDelegate>
+@interface ViewController : TWTRTimelineViewController <SelectFeedViewControllerDelegate, MasterViewControllerDelegate, MFMailComposeViewControllerDelegate, TermsAndConditionsViewControllerDelegate>
 {
     IBOutlet UITableView* feed;
     IBOutlet UIButton* currentFeedButton;
@@ -41,6 +42,7 @@
 -(IBAction)contactUs:(id)sender;
 -(void) refreshFeed;
 
+-(void)termsAndConditionsAgreed:(UIViewController*)vc;
 
 -(void)didDismissViewController:(UIViewController*)vc;
 

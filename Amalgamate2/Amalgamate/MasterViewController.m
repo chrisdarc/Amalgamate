@@ -34,7 +34,7 @@
     // Email Content
     NSString *messageBody = @"I want to report this issue";
     // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"huajisas@gmail.com"];
+    NSArray *toRecipents = [NSArray arrayWithObject:@"amalgamateapp@gmail.com"];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;

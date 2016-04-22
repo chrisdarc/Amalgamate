@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		75A73F551CAB2DEF007BA316 /* AmalgamateIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75A73F541CAB2DEF007BA316 /* AmalgamateIcon.jpg */; };
 		83245BEC1C99FFA6000C6EBD /* SearchTermData.m in Sources */ = {isa = PBXBuildFile; fileRef = 83245BEB1C99FFA6000C6EBD /* SearchTermData.m */; };
+		832CB4DA1CC99BD1008E0635 /* TermsAndConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832CB4D81CC99BD1008E0635 /* TermsAndConditionsViewController.m */; };
+		832CB4DB1CC99BD1008E0635 /* TermsAndConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832CB4D91CC99BD1008E0635 /* TermsAndConditionsViewController.xib */; };
 		83657F451C99F45900B799A2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F411C99F45900B799A2 /* Fabric.framework */; };
 		83657F461C99F45900B799A2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83657F421C99F45900B799A2 /* TwitterKit.framework */; };
 		83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83657F431C99F45900B799A2 /* TwitterKitResources.bundle */; };
@@ -78,6 +80,9 @@
 		75A73F541CAB2DEF007BA316 /* AmalgamateIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AmalgamateIcon.jpg; sourceTree = "<group>"; };
 		83245BEA1C99FFA6000C6EBD /* SearchTermData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTermData.h; sourceTree = "<group>"; };
 		83245BEB1C99FFA6000C6EBD /* SearchTermData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTermData.m; sourceTree = "<group>"; };
+		832CB4D71CC99BD1008E0635 /* TermsAndConditionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsViewController.h; sourceTree = "<group>"; };
+		832CB4D81CC99BD1008E0635 /* TermsAndConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsViewController.m; sourceTree = "<group>"; };
+		832CB4D91CC99BD1008E0635 /* TermsAndConditionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsAndConditionsViewController.xib; sourceTree = "<group>"; };
 		83657F411C99F45900B799A2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		83657F421C99F45900B799A2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		83657F431C99F45900B799A2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -238,6 +243,9 @@
 				83A077FB1CA210E700AF4797 /* SelectFeedViewController.h */,
 				83A077FC1CA210E700AF4797 /* SelectFeedViewController.m */,
 				83A077FD1CA210E700AF4797 /* SelectFeedViewController.xib */,
+				832CB4D71CC99BD1008E0635 /* TermsAndConditionsViewController.h */,
+				832CB4D81CC99BD1008E0635 /* TermsAndConditionsViewController.m */,
+				832CB4D91CC99BD1008E0635 /* TermsAndConditionsViewController.xib */,
 				83927DC41C972571001DCCF4 /* Assets.xcassets */,
 				83927DC61C972571001DCCF4 /* LaunchScreen.storyboard */,
 				83927DC91C972571001DCCF4 /* Info.plist */,
@@ -475,6 +483,7 @@
 				FF55F8211CAB54E1004E534F /* favicon.ico in Resources */,
 				83927DC51C972571001DCCF4 /* Assets.xcassets in Resources */,
 				83927DC31C972570001DCCF4 /* Main.storyboard in Resources */,
+				832CB4DB1CC99BD1008E0635 /* TermsAndConditionsViewController.xib in Resources */,
 				83A077FF1CA210E700AF4797 /* SelectFeedViewController.xib in Resources */,
 				75A73F551CAB2DEF007BA316 /* AmalgamateIcon.jpg in Resources */,
 				83657F471C99F45900B799A2 /* TwitterKitResources.bundle in Resources */,
@@ -542,6 +551,7 @@
 				FFA090CA1CA2318000ADFAC4 /* AFHTTPRequestOperation.m in Sources */,
 				FFA090C41CA2318000ADFAC4 /* AFNetworkReachabilityManager.m in Sources */,
 				FFA090C31CA2318000ADFAC4 /* SBJsonParser.m in Sources */,
+				832CB4DA1CC99BD1008E0635 /* TermsAndConditionsViewController.m in Sources */,
 				FFA090C51CA2318000ADFAC4 /* AFURLRequestSerialization.m in Sources */,
 				83927DED1C97281B001DCCF4 /* SearchViewController.m in Sources */,
 				FFA090C61CA2318000ADFAC4 /* AFURLResponseSerialization.m in Sources */,
